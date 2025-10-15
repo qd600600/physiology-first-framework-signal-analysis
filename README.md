@@ -207,24 +207,46 @@ physiology-first-framework-signal-analysis/
 
 ## 🔬 Datasets
 
-This project utilizes 11 comprehensive physiological datasets:
+This project utilizes 11 comprehensive physiological datasets. **Due to their large size (total ~4GB), datasets are not included in this repository.**
 
-### Core Validation Datasets (7 datasets)
-1. **WESAD** - Wearable stress and affect detection
-2. **MMASH** - Multilevel monitoring of activity and sleep
-3. **CRWD** - Cognitive load and stress detection
-4. **SWELL** - Stress and workload analysis
-5. **Nurses** - Healthcare worker stress monitoring
-6. **DRIVE-DB** - Driver stress analysis
-7. **Non-EEG** - Non-electroencephalographic signals
+### 📥 **Dataset Download Sources**
 
-### Extended Validation Datasets (4 datasets)
-8. **Enhanced Health** - Enhanced health monitoring
-9. **Global Mental Health** - Global mental health analysis
-10. **Mental Health Prediction** - Mental health prediction
-11. **UWS** - Additional stress validation
+#### **Publicly Available Datasets**:
+1. **WESAD** - [Kaggle Download](https://www.kaggle.com/datasets/robikscube/wesad-wearable-stress-affect-detection) (~500MB)
+2. **MMASH** - [PhysioNet Download](https://physionet.org/content/mmash/1.0.0/) (~200MB)
+3. **SWELL** - [Kaggle Download](https://www.kaggle.com/datasets/swell-workload-analysis) (~1.2GB)
+4. **DRIVE-DB** - [Kaggle Download](https://www.kaggle.com/datasets/drive-stress-analysis) (~1.5GB)
 
-For detailed dataset information, see [docs/datasets.md](docs/datasets.md).
+#### **Research Datasets** (Contact Author):
+5. **CRWD** - Cognitive load and stress detection (~100MB)
+6. **Nurses** - Healthcare worker stress monitoring (~1.1GB)
+7. **Non-EEG** - Non-electroencephalographic signals (~100MB)
+8. **Enhanced Health** - Enhanced health monitoring (~80MB)
+9. **Global Mental Health** - Global mental health analysis (~60MB)
+10. **Mental Health Prediction** - Mental health prediction (~40MB)
+11. **UWS** - Additional stress validation (TBD)
+
+### 📋 **Dataset Organization**
+After downloading, organize datasets as follows:
+```
+data_analysis/data/
+├── wesad/raw/           # WESAD raw files
+├── mmash/raw/           # MMASH raw files
+├── crwd/raw/            # CRWD raw files
+└── [other datasets]/raw/
+
+wesad_analysis/data/
+├── stress_datasets/
+│   ├── swell/raw/
+│   ├── nurses/raw/
+│   ├── drive_db/raw/
+│   ├── non_eeg/raw/
+│   └── uws/raw/
+└── [other datasets]/raw/
+```
+
+**📖 For complete dataset download instructions, see [DATA_ACCESS.md](DATA_ACCESS.md)**
+**📊 For detailed dataset information, see [docs/datasets.md](docs/datasets.md)**
 
 ## 🛠️ Technical Features
 
