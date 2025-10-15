@@ -1,0 +1,218 @@
+# Contributing to Physiological Signal Analysis
+
+Thank you for your interest in contributing to this project! This document provides guidelines for contributing to the Physiological Signal Analysis repository.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Git
+- Basic understanding of physiological signal analysis
+
+### Development Setup
+
+1. **Fork the repository**
+   ```bash
+   # Fork on GitHub, then clone your fork
+   git clone https://github.com/yourusername/physiological-signal-analysis.git
+   cd physiological-signal-analysis
+   ```
+
+2. **Create a virtual environment**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install dependencies**
+   ```bash
+   pip install -r requirements_unified.txt
+   pip install -e .  # Install in development mode
+   ```
+
+## 📝 How to Contribute
+
+### Types of Contributions
+
+1. **Bug Reports**: Report issues and bugs
+2. **Feature Requests**: Suggest new features or improvements
+3. **Code Contributions**: Submit code fixes or new features
+4. **Documentation**: Improve documentation and examples
+5. **Data**: Contribute new datasets or data processing scripts
+
+### Bug Reports
+
+When reporting bugs, please include:
+
+- Clear description of the issue
+- Steps to reproduce the problem
+- Expected vs actual behavior
+- System information (OS, Python version, etc.)
+- Error messages or logs
+
+### Feature Requests
+
+When suggesting features:
+
+- Describe the feature clearly
+- Explain the use case and benefits
+- Consider implementation complexity
+- Check if similar features already exist
+
+### Code Contributions
+
+#### Workflow
+
+1. **Create a branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+2. **Make changes**
+   - Follow the coding style guidelines
+   - Add tests for new functionality
+   - Update documentation as needed
+
+3. **Test your changes**
+   ```bash
+   pytest tests/
+   ```
+
+4. **Commit changes**
+   ```bash
+   git add .
+   git commit -m "Add feature: brief description"
+   ```
+
+5. **Push and create pull request**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+#### Coding Style
+
+- Follow PEP 8 style guidelines
+- Use meaningful variable and function names
+- Add docstrings to functions and classes
+- Keep functions focused and small
+- Add comments for complex logic
+
+#### Code Structure
+
+```
+your_contribution/
+├── __init__.py
+├── main_module.py
+├── tests/
+│   └── test_main_module.py
+└── README.md  # If adding new functionality
+```
+
+### Documentation
+
+When contributing to documentation:
+
+- Use clear, concise language
+- Include code examples where helpful
+- Update the main README if needed
+- Follow markdown best practices
+
+## 🧪 Testing
+
+### Running Tests
+
+```bash
+# Run all tests
+pytest
+
+# Run specific test file
+pytest tests/test_specific_module.py
+
+# Run with coverage
+pytest --cov=physiological_signal_analysis
+```
+
+### Writing Tests
+
+- Test both success and failure cases
+- Use descriptive test names
+- Mock external dependencies
+- Keep tests independent
+
+## 📋 Pull Request Guidelines
+
+### Before Submitting
+
+- [ ] Code follows style guidelines
+- [ ] Tests pass locally
+- [ ] Documentation updated
+- [ ] No merge conflicts
+- [ ] Clear commit messages
+
+### Pull Request Template
+
+```markdown
+## Description
+Brief description of changes
+
+## Type of Change
+- [ ] Bug fix
+- [ ] New feature
+- [ ] Documentation update
+- [ ] Performance improvement
+
+## Testing
+- [ ] Tests added/updated
+- [ ] All tests pass
+
+## Checklist
+- [ ] Code follows style guidelines
+- [ ] Self-review completed
+- [ ] Documentation updated
+```
+
+## 🏷️ Release Process
+
+### Version Numbering
+
+We follow [Semantic Versioning](https://semver.org/):
+- MAJOR: Breaking changes
+- MINOR: New features (backward compatible)
+- PATCH: Bug fixes (backward compatible)
+
+### Release Checklist
+
+- [ ] Update version numbers
+- [ ] Update CHANGELOG.md
+- [ ] Run full test suite
+- [ ] Update documentation
+- [ ] Create release notes
+
+## 💬 Communication
+
+### Getting Help
+
+- Open an issue for questions
+- Use discussions for general topics
+- Check existing issues first
+
+### Code Review Process
+
+1. Automated checks must pass
+2. At least one maintainer review required
+3. Address feedback promptly
+4. Keep discussions constructive
+
+## 📄 License
+
+By contributing, you agree that your contributions will be licensed under the MIT License.
+
+## 🙏 Recognition
+
+Contributors will be recognized in:
+- CONTRIBUTORS.md file
+- Release notes
+- Project documentation
+
+Thank you for contributing to this project!
