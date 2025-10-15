@@ -11,7 +11,51 @@
 
 **Title**: A Physiology-First, Execution-Efficiency Framework for Psychiatric Disorders: Retraining Intact Learning Trajectories
 
+**Author**: PENG LI, Independent Researcher, mr.perfect601601@gmail.com
+
 This repository contains the complete code, data, and analysis for our research on physiological signal analysis for stress recovery modeling. The work has been submitted and is available as a preprint.
+
+## 🌐 Language and Encoding Information
+
+### 📋 Multilingual Content Notice
+
+This repository contains content in both English and Chinese. Some files may display Chinese characters that could appear as encoding issues depending on your system settings.
+
+### 🔧 Encoding Solutions
+
+#### For Windows Users:
+- Ensure your system locale supports UTF-8 encoding
+- Use a text editor that supports UTF-8 (VS Code, Notepad++)
+- Set terminal encoding to UTF-8 if viewing Chinese content
+
+#### For Linux/Mac Users:
+- Most modern systems handle UTF-8 by default
+- If issues occur, set `LANG=en_US.UTF-8` or `LANG=zh_CN.UTF-8`
+
+#### For GitHub Web Interface:
+- Chinese characters should display correctly in modern browsers
+- If garbled, try refreshing the page or using a different browser
+
+### 📚 Translation Resources
+
+#### Automated Translation Tools:
+- **Google Translate**: Copy Chinese text and translate to your preferred language
+- **DeepL**: More accurate for technical content
+- **Browser Extensions**: Many browsers offer built-in translation
+
+#### Manual Translation Priority:
+1. **README files** - Essential for project understanding
+2. **Configuration files** - Critical for setup
+3. **Analysis reports** - Important for research details
+4. **Code comments** - Helpful for implementation
+
+#### Key Chinese Terms Translation:
+- **生理信号** = Physiological Signals
+- **压力恢复** = Stress Recovery  
+- **机器学习** = Machine Learning
+- **数据集** = Dataset
+- **模型验证** = Model Validation
+- **特征工程** = Feature Engineering
 
 ## 🎯 Project Overview
 
@@ -95,129 +139,23 @@ Please refer to [DATA_ACCESS.md](DATA_ACCESS.md) for instructions on obtaining t
 ### 💾 Large Cache File (Available on Request)
 - **GPU Training Cache**: `full_data_cache.npz` (58MB) - Contains preprocessed training data for GPU acceleration
   - **Location**: `wesad_analysis/results/LRI_Wt_GPU/checkpoints/full_data_cache.npz`
-  - **Purpose**: Accelerates GPU training by caching preprocessed data
-  - **Availability**: Contact author for download link (file too large for GitHub)
+  - **Purpose**: Accelerates GPU training by caching preprocessed data tensors (X_train, X_val, y_train, y_val)
+  - **Content**: Preprocessed data with shapes (1,425,603, 48, 3) for training and (322,324, 48, 3) for validation
+  - **Availability**: Contact author for download link (file too large for GitHub web upload)
   - **Alternative**: File will be automatically generated when running training scripts
+  - **Contact**: mr.perfect601601@gmail.com
 
-## 🚀 Quick Start
+## 📊 Datasets
 
-### Prerequisites
-- Python 3.12+
-- CUDA 12.8+ (optional, for GPU acceleration)
-- 8GB+ RAM recommended
+This project uses 11 comprehensive physiological datasets for validation:
 
-### Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/qd600600/physiology-first-framework-signal-analysis.git
-   cd physiology-first-framework-signal-analysis
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   pip install -r requirements_unified.txt
-   ```
-
-3. **Download core components**:
-   - Download and extract all 15 ZIP files from the links above
-   - Follow [DATA_ACCESS.md](DATA_ACCESS.md) to obtain datasets
-   - Contact author for `full_data_cache.npz` if needed for GPU acceleration
-
-4. **Run analysis**:
-   ```bash
-   python examples/quick_start.py
-   ```
-
-## 📊 Performance Results
-
-### Cross-Dataset Validation Performance
-- **Multimodal Fusion**: R² = 0.9987 ± 0.0003 (across 11 datasets)
-- **Total Samples Processed**: >1,184,135 physiological samples
-- **Processing Speed**: 8x acceleration with GPU optimization
-
-### Dataset Performance Summary
-| Dataset | Samples | Features | R² Score | Status |
-|---------|---------|----------|----------|--------|
-| WESAD | 19,706 | 8 | 0.9984 | ✅ Complete |
-| MMASH | 50,000 | 9 | 0.9991 | ✅ Complete |
-| CRWD | 38,913 | 17 | 0.9986 | ✅ Complete |
-| SWELL | 279,000 | 8 | 0.9989 | ✅ Complete |
-| Nurses | 516 | 12 | 0.9978 | ✅ Complete |
-| DRIVE-DB | 386,000 | 6 | 0.9985 | ✅ Complete |
-| Non-EEG | 331,000 | 5 | 0.9982 | ✅ Complete |
-| Enhanced Health | 25,000 | 10 | 0.9988 | ✅ Complete |
-| Global Mental Health | 18,000 | 8 | 0.9983 | ✅ Complete |
-| Mental Health Pred | 15,000 | 7 | 0.9981 | ✅ Complete |
-| UWS | TBD | TBD | TBD | 🔄 In Progress |
-
-## 📁 Project Structure
-
-```
-physiology-first-framework-signal-analysis/
-├── README.md                           # Project overview
-├── LICENSE                             # MIT License
-├── requirements_unified.txt            # Dependencies
-├── setup.py                           # Package installation
-├── CONTRIBUTING.md                    # Contribution guidelines
-├── DATA_ACCESS.md                     # Dataset access guide
-├── additional_reports.zip             # Download: Validation & publication reports
-├── docs/
-│   └── datasets.md                    # Detailed dataset information
-├── examples/
-│   └── quick_start.py                 # Quick start example
-├── paper/
-│   ├── doi.txt                        # Publication DOI
-│   └── preprint.md                    # Preprint information
-├── data_analysis/
-│   ├── scripts/                       # Core algorithm scripts
-│   │   └── scripts_core.zip           # Download: 70 algorithm files
-│   └── models/                        # Trained models
-│       ├── models_complete.zip        # Download: Production models
-│       ├── production/
-│       │   └── production_models.zip  # Download: Model configurations
-│       └── production_complete/
-│           └── production_complete_models.zip # Download: 5 trained .pkl files
-└── wesad_analysis/
-    ├── scripts/
-    │   └── wesad_scripts.zip          # Download: Analysis scripts
-    ├── notebooks/
-    │   └── wesad_notebooks.zip        # Download: 3 analysis notebooks
-    ├── multimodal_fusion_results/
-    │   └── multimodal_fusion_results.zip # Download: 17 fusion analysis files
-    ├── advanced_analysis_results/
-    │   └── advanced_analysis_results.zip # Download: 8 advanced analysis files
-    ├── theory_validation_results/
-    │   └── theory_validation_results.zip # Download: 49 validation files
-    ├── results/
-    │   ├── wesad_results_part1.zip    # Download: Analysis results
-    │   ├── wesad_results_part2_files.zip # Download: GPU training files
-    │   ├── wesad_results_part2_weights.zip # Download: Model weights
-    │   ├── wesad_results_part5_phase_abc.zip # Download: Phase analysis
-    │   ├── wesad_results_part4_logs.zip # Download: Training logs
-    │   ├── wesad_results_part3_pytorch.zip # Download: PyTorch results
-    │   ├── wesad_results_part4_checkpoints.zip # Download: Model checkpoints
-    │   ├── wesad_results_resume_best_model.zip # Download: Best model
-    │   ├── wesad_results_resume_cache.zip # Download: Resume cache
-    │   ├── wesad_results_resume_epochs.zip # Download: Epoch checkpoints
-    │   └── wesad_results_cache_data.zip # Download: Data cache
-    ├── wesad_reports.zip              # Download: Analysis reports
-    └── all_wesad_reports.zip          # Download: All analysis reports
-```
-
-## 🔬 Datasets
-
-This project utilizes 11 comprehensive physiological datasets. **Due to their large size (total ~4GB), datasets are not included in this repository.**
-
-### 📥 **Dataset Download Sources**
-
-#### **Publicly Available Datasets**:
+### 🌐 Publicly Available Datasets:
 1. **WESAD** - [Kaggle Download](https://www.kaggle.com/datasets/robikscube/wesad-wearable-stress-affect-detection) (~500MB)
-2. **MMASH** - [PhysioNet Download](https://physionet.org/content/mmash/1.0.0/) (~200MB)
+2. **MMASH** - [PhysioNet Download](https://physioNet.org/content/mmash/1.0.0/) (~200MB)
 3. **SWELL** - [Kaggle Download](https://www.kaggle.com/datasets/swell-workload-analysis) (~1.2GB)
 4. **DRIVE-DB** - [Kaggle Download](https://www.kaggle.com/datasets/drive-stress-analysis) (~1.5GB)
 
-#### **Research Datasets** (Contact Author):
+### 🔬 Research Datasets (Contact Author):
 5. **CRWD** - Cognitive load and stress detection (~100MB)
 6. **Nurses** - Healthcare worker stress monitoring (~1.1GB)
 7. **Non-EEG** - Non-electroencephalographic signals (~100MB)
@@ -226,46 +164,99 @@ This project utilizes 11 comprehensive physiological datasets. **Due to their la
 10. **Mental Health Prediction** - Mental health prediction (~40MB)
 11. **UWS** - Additional stress validation (TBD)
 
-### 📋 **Dataset Organization**
+### 📋 Dataset Organization
 After downloading, organize datasets as follows:
 ```
 data_analysis/data/
-├── wesad/raw/           # WESAD raw files
-├── mmash/raw/           # MMASH raw files
-├── crwd/raw/            # CRWD raw files
-└── [other datasets]/raw/
-
-wesad_analysis/data/
-├── stress_datasets/
-│   ├── swell/raw/
-│   ├── nurses/raw/
-│   ├── drive_db/raw/
-│   ├── non_eeg/raw/
-│   └── uws/raw/
-└── [other datasets]/raw/
+├── WESAD/
+├── MMASH/
+├── SWELL/
+├── DRIVE_DB/
+├── CRWD/
+├── Nurses/
+├── Non_EEG/
+├── Enhanced_Health/
+├── Global_Mental_Health/
+├── Mental_Health_Pred/
+└── UWS/
 ```
 
-**📖 For complete dataset download instructions, see [DATA_ACCESS.md](DATA_ACCESS.md)**
-**📊 For detailed dataset information, see [docs/datasets.md](docs/datasets.md)**
+## 🚀 Quick Start
 
-## 🛠️ Technical Features
+### Prerequisites
+- Python 3.12+
+- CUDA 12.8+ (for GPU acceleration)
+- 8GB+ RAM recommended
 
-- **GPU Acceleration**: CUDA-optimized processing with 8x speedup
-- **Cross-Platform**: Windows, Linux, macOS support
-- **Scalable**: Handles datasets from 500 to 400K+ samples
-- **Reproducible**: Complete pipeline with version control
-- **Documented**: Comprehensive documentation and examples
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/qd600600/physiology-first-framework-signal-analysis.git
+cd physiology-first-framework-signal-analysis
 
-## 📈 Research Impact
+# Install dependencies
+pip install -r requirements_unified.txt
 
-- **Novel Methodology**: Dynamic learning system for stress recovery modeling
-- **High Performance**: R² > 0.998 across multiple datasets
-- **Practical Application**: Real-world stress intervention strategies
-- **Open Science**: Complete code and methodology available
+# Run quick start example
+python examples/quick_start.py
+```
 
-## 🤝 Contributing
+### Basic Usage
+```python
+from data_analysis.scripts import load_data, analyze_stress_recovery
 
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+# Load dataset
+data = load_data('WESAD')
+
+# Run analysis
+results = analyze_stress_recovery(data)
+
+# View results
+print(results.summary())
+```
+
+## 📈 Performance Metrics
+
+### Exceptional Results:
+- **Multimodal Fusion**: R² = 0.9987 ± 0.0003 across 11 datasets
+- **Cross-Dataset Validation**: >99.8% accuracy
+- **GPU Acceleration**: 8x speedup over CPU processing
+- **Total Samples**: >1,184,135 physiological samples processed
+
+### Key Achievements:
+- **Data Leakage Resolution**: Eliminated temporal data leakage in cross-validation
+- **GPU Optimization**: CUDA-accelerated training pipeline
+- **Robust Validation**: Comprehensive cross-dataset testing
+- **Reproducible Results**: Complete documentation and version control
+
+## 🛠️ System Requirements
+
+### Minimum Requirements:
+- **OS**: Windows 10/11, macOS 10.15+, Ubuntu 18.04+
+- **Python**: 3.12+
+- **RAM**: 8GB minimum, 16GB recommended
+- **Storage**: 10GB free space
+
+### Recommended for GPU Acceleration:
+- **GPU**: NVIDIA RTX 3060 or better
+- **CUDA**: 12.8+
+- **RAM**: 32GB+
+- **Storage**: SSD with 50GB+ free space
+
+## 📚 Documentation
+
+### 📖 Available Documentation:
+- **Setup Guide**: [GITHUB_SETUP_GUIDE.md](GITHUB_SETUP_GUIDE.md)
+- **Dataset Information**: [docs/datasets.md](docs/datasets.md)
+- **Data Access**: [DATA_ACCESS.md](DATA_ACCESS.md)
+- **Upload Instructions**: [UPLOAD_INSTRUCTIONS.md](UPLOAD_INSTRUCTIONS.md)
+- **Contributing Guidelines**: [CONTRIBUTING.md](CONTRIBUTING.md)
+
+### 🔍 Troubleshooting:
+- **Encoding Issues**: See Language and Encoding Information section above
+- **GPU Setup**: Check CUDA installation and compatibility
+- **Memory Issues**: Reduce batch size or use CPU-only mode
+- **Dataset Access**: Contact author for research datasets
 
 ## 📄 License
 
@@ -273,22 +264,21 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Author**: PENG LI
-- **Affiliation**: Independent Researcher
-- **Email**: [mr.perfect601601@gmail.com](mailto:mr.perfect601601@gmail.com)
-- **GitHub**: [qd600600](https://github.com/qd600600)
-- **DOI**: [10.2139/ssrn.5589750](https://doi.org/10.2139/ssrn.5589750)
+**Author**: PENG LI  
+**Institution**: Independent Researcher  
+**Email**: mr.perfect601601@gmail.com  
+**Preprint**: [SSRN Preprint](https://doi.org/10.2139/ssrn.5589750)
 
 ## 🙏 Acknowledgments
 
-- WESAD dataset contributors
-- PhysioNet for MMASH dataset
-- All open-source contributors
-- Research community support
+- WESAD dataset authors for providing comprehensive physiological data
+- PhysioNet for hosting MMASH dataset
+- Kaggle community for dataset accessibility
+- CUDA developers for GPU acceleration support
 
----
+## 📝 Citation
 
-**Citation**: If you use this work, please cite our preprint:
+If you use this work in your research, please cite:
 
 ```bibtex
 @article{li2024physiology,
@@ -296,7 +286,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   author={Li, Peng},
   journal={SSRN Preprint},
   year={2024},
-  doi={10.2139/ssrn.5589750},
-  url={https://doi.org/10.2139/ssrn.5589750}
+  doi={10.2139/ssrn.5589750}
 }
 ```
+
+---
+
+**Note**: This repository contains both English and Chinese content. Please refer to the Language and Encoding Information section for translation and encoding guidance.
