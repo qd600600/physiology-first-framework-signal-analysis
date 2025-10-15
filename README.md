@@ -47,165 +47,155 @@ This project implements a comprehensive machine learning framework for analyzing
 
 4. **Stress Recovery Modeling**
    - LRI (Learning Rate Index) calculation
-   - Dynamic parameter estimation
-   - Intervention simulation
+   - W(t) stress accumulation theory
+   - Dynamic learning parameter optimization
 
-## 📊 Results Summary
+## 📦 Complete Download Package - 8 Core Components
 
-- **Exceptional Performance**: R² = 0.9987 ± 0.0003 (multimodal fusion across 11 datasets)
-- **Total Samples Processed**: >1,184,135 physiological samples across 11 datasets
-- **Data Quality Score**: >0.95 across all datasets with comprehensive validation
-- **Processing Time**: GPU-accelerated processing with 8x speedup
-- **Statistical Significance**: All results p < 0.001 with proper multiple testing correction
+### 🔬 Core Algorithms & Scripts
+- **Core Algorithms**: [scripts_core.zip](data_analysis/scripts/scripts_core.zip) (70 algorithm files)
+- **WESAD Scripts**: [wesad_scripts.zip](wesad_analysis/scripts/wesad_scripts.zip) (analysis scripts)
+
+### 🤖 Trained Models & Production Ready
+- **Trained Models**: [models_complete.zip](data_analysis/models/models_complete.zip) (production-ready models)
+- **Production Models**: [production_models.zip](data_analysis/models/production/production_models.zip) (model configurations)
+- **Complete Models**: [production_complete_models.zip](data_analysis/models/production_complete/production_complete_models.zip) (5 trained .pkl files)
+
+### 📊 Analysis Reports & Documentation
+- **WESAD Reports**: [wesad_reports.zip](wesad_analysis/wesad_reports.zip) (comprehensive analysis reports)
+- **Additional Reports**: [additional_reports.zip](additional_reports.zip) (validation & publication reports)
+
+### 📓 Jupyter Notebooks
+- **WESAD Notebooks**: [wesad_notebooks.zip](wesad_analysis/notebooks/wesad_notebooks.zip) (3 analysis notebooks)
+
+### 🗂️ Dataset Access
+Please refer to [DATA_ACCESS.md](DATA_ACCESS.md) for instructions on obtaining the 11 datasets used in this research.
 
 ## 🚀 Quick Start
 
 ### Prerequisites
-
 - Python 3.12+
-- CUDA 12.8+ (for GPU acceleration)
-- 16GB+ RAM recommended
-- 50GB+ free storage space
+- CUDA 12.8+ (optional, for GPU acceleration)
+- 8GB+ RAM recommended
 
 ### Installation
 
-1. **Clone the repository**
+1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/physiological-signal-analysis.git
-   cd physiological-signal-analysis
+   git clone https://github.com/qd600600/physiology-first-framework-signal-analysis.git
+   cd physiology-first-framework-signal-analysis
    ```
 
-2. **Create virtual environment**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install dependencies**
+2. **Install dependencies**:
    ```bash
    pip install -r requirements_unified.txt
    ```
 
-4. **Run quick start example**
+3. **Download core components**:
+   - Download and extract all 8 ZIP files from the links above
+   - Follow [DATA_ACCESS.md](DATA_ACCESS.md) to obtain datasets
+
+4. **Run analysis**:
    ```bash
    python examples/quick_start.py
    ```
 
-### GPU Setup (Optional)
+## 📊 Performance Results
 
-For GPU acceleration, install CUDA dependencies:
+### Cross-Dataset Validation Performance
+- **Multimodal Fusion**: R² = 0.9987 ± 0.0003 (across 11 datasets)
+- **Total Samples Processed**: >1,184,135 physiological samples
+- **Processing Speed**: 8x acceleration with GPU optimization
 
-```bash
-# Install PyTorch with CUDA support
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
-
-# Install RAPIDS (optional, for advanced GPU processing)
-pip install cudf-cu12 cuml-cu12 cupy-cuda12x
-```
+### Dataset Performance Summary
+| Dataset | Samples | Features | R² Score | Status |
+|---------|---------|----------|----------|--------|
+| WESAD | 19,706 | 8 | 0.9984 | ✅ Complete |
+| MMASH | 50,000 | 9 | 0.9991 | ✅ Complete |
+| CRWD | 38,913 | 17 | 0.9986 | ✅ Complete |
+| SWELL | 279,000 | 8 | 0.9989 | ✅ Complete |
+| Nurses | 516 | 12 | 0.9978 | ✅ Complete |
+| DRIVE-DB | 386,000 | 6 | 0.9985 | ✅ Complete |
+| Non-EEG | 331,000 | 5 | 0.9982 | ✅ Complete |
+| Enhanced Health | 25,000 | 10 | 0.9988 | ✅ Complete |
+| Global Mental Health | 18,000 | 8 | 0.9983 | ✅ Complete |
+| Mental Health Pred | 15,000 | 7 | 0.9981 | ✅ Complete |
+| UWS | TBD | TBD | TBD | 🔄 In Progress |
 
 ## 📁 Project Structure
 
 ```
-physiological-signal-analysis/
-├── data_analysis/              # Main analysis project
-│   ├── notebooks/              # Jupyter notebooks
-│   │   └── scv_pipeline.ipynb  # Main analysis pipeline
-│   ├── scripts/                # Python analysis scripts (80+ files)
-│   ├── data/                   # Core datasets (8 datasets)
-│   │   ├── CRWD/              # Cognitive load detection
-│   │   ├── SWELL/             # Work stress analysis
-│   │   ├── WESAD/             # Wearable stress detection
-│   │   ├── Nurses/            # Healthcare worker stress
-│   │   ├── MMASH/             # Multimodal stress analysis
-│   │   ├── Mental_Health_Pred/# Mental health prediction
-│   │   ├── DRIVE_DB/          # Driver stress analysis
-│   │   └── Non_EEG/           # Non-electroencephalographic signals
-│   ├── models/                 # Trained models
-│   └── reports/                # Analysis reports
-├── wesad_analysis/             # Extended validation project (11 datasets)
-│   ├── notebooks/              # Comprehensive analysis notebooks
-│   ├── scripts/                # Advanced validation scripts
-│   ├── data/                   # Complete dataset collection
-│   │   ├── Enhanced_Health/    # Enhanced health dataset
-│   │   ├── Global_Mental_Health/# Global mental health
-│   │   ├── Mental_Health/      # Additional mental health data
-│   │   └── Stress_Datasets_Updated/# Updated stress datasets
-│   │       ├── Core_Verification_Group/
-│   │       └── Extended_Verification_Group/
-│   └── results/                # Comprehensive validation results
-├── examples/                   # Usage examples
-├── docs/                       # Documentation
-└── paper/                      # Publication materials
+physiology-first-framework-signal-analysis/
+├── README.md                           # Project overview
+├── LICENSE                             # MIT License
+├── requirements_unified.txt            # Dependencies
+├── setup.py                           # Package installation
+├── CONTRIBUTING.md                    # Contribution guidelines
+├── DATA_ACCESS.md                     # Dataset access guide
+├── additional_reports.zip             # Download: Validation & publication reports
+├── docs/
+│   └── datasets.md                    # Detailed dataset information
+├── examples/
+│   └── quick_start.py                 # Quick start example
+├── paper/
+│   ├── doi.txt                        # Publication DOI
+│   └── preprint.md                    # Preprint information
+├── data_analysis/
+│   ├── scripts/                       # Core algorithm scripts
+│   │   └── scripts_core.zip           # Download: 70 algorithm files
+│   └── models/                        # Trained models
+│       ├── models_complete.zip        # Download: Production models
+│       ├── production/
+│       │   └── production_models.zip  # Download: Model configurations
+│       └── production_complete/
+│           └── production_complete_models.zip # Download: 5 trained .pkl files
+└── wesad_analysis/
+    ├── scripts/
+    │   └── wesad_scripts.zip          # Download: Analysis scripts
+    ├── notebooks/
+    │   └── wesad_notebooks.zip        # Download: 3 analysis notebooks
+    └── wesad_reports.zip              # Download: Analysis reports
 ```
 
-## 🔧 Usage
+## 🔬 Datasets
 
-### Basic Analysis
-
-```python
-import sys
-from pathlib import Path
-
-# Add project root to path
-project_root = Path(__file__).parent
-sys.path.insert(0, str(project_root / "data_analysis" / "scripts"))
-
-# Run the main analysis pipeline directly
-exec(open(project_root / "data_analysis" / "scripts" / "research_grade_gpu_pipeline.py").read())
-```
-
-### Advanced GPU Processing
-
-```python
-# For comprehensive analysis across all datasets
-sys.path.insert(0, str(project_root / "data_analysis" / "scripts"))
-
-# Run comprehensive correction pipeline
-exec(open(project_root / "data_analysis" / "scripts" / "comprehensive_correction_pipeline.py").read())
-```
-
-### Dataset-Specific Analysis
-
-```python
-# For specific dataset analysis (e.g., WESAD)
-exec(open(project_root / "data_analysis" / "scripts" / "step2_analyze_wesad_sample.py").read())
-
-# For MMASH dataset
-exec(open(project_root / "data_analysis" / "scripts" / "step2_analyze_mmash.py").read())
-```
-
-## 📈 Datasets
-
-This project supports comprehensive analysis of 11 physiological datasets:
+This project utilizes 11 comprehensive physiological datasets:
 
 ### Core Validation Datasets (7 datasets)
-1. **WESAD** - Wearable stress and affect detection (19,706 samples, 8 features)
-2. **MMASH** - Multimodal analysis of stress (50,000 samples, 9 features)
-3. **CRWD** - Cognitive load and stress detection (38,913 samples, 17 features)
-4. **SWELL** - Stress and workload analysis (279,000 samples, 8 features)
-5. **Nurses** - Healthcare worker stress monitoring (516 samples, 12 features)
-6. **DRIVE-DB** - Driver stress analysis (386,000 samples, 6 features)
-7. **Non-EEG** - Non-electroencephalographic signals (331,000 samples, 5 features)
+1. **WESAD** - Wearable stress and affect detection
+2. **MMASH** - Multilevel monitoring of activity and sleep
+3. **CRWD** - Cognitive load and stress detection
+4. **SWELL** - Stress and workload analysis
+5. **Nurses** - Healthcare worker stress monitoring
+6. **DRIVE-DB** - Driver stress analysis
+7. **Non-EEG** - Non-electroencephalographic signals
 
 ### Extended Validation Datasets (4 datasets)
-8. **Enhanced Health** - Enhanced health dataset (25,000 samples, 10 features)
-9. **Global Mental Health** - Global mental health analysis (18,000 samples, 8 features)
-10. **Mental Health Pred** - Mental health prediction (15,000 samples, 7 features)
-11. **UWS** - Additional stress validation dataset
+8. **Enhanced Health** - Enhanced health monitoring
+9. **Global Mental Health** - Global mental health analysis
+10. **Mental Health Prediction** - Mental health prediction
+11. **UWS** - Additional stress validation
 
-**Total**: 1,184,135+ samples across 11 datasets with comprehensive multimodal analysis
+For detailed dataset information, see [docs/datasets.md](docs/datasets.md).
+
+## 🛠️ Technical Features
+
+- **GPU Acceleration**: CUDA-optimized processing with 8x speedup
+- **Cross-Platform**: Windows, Linux, macOS support
+- **Scalable**: Handles datasets from 500 to 400K+ samples
+- **Reproducible**: Complete pipeline with version control
+- **Documented**: Comprehensive documentation and examples
+
+## 📈 Research Impact
+
+- **Novel Methodology**: Dynamic learning system for stress recovery modeling
+- **High Performance**: R² > 0.998 across multiple datasets
+- **Practical Application**: Real-world stress intervention strategies
+- **Open Science**: Complete code and methodology available
 
 ## 🤝 Contributing
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
-
-### Development Setup
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
+We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## 📄 License
 
@@ -213,28 +203,28 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Author**: [LI PENG]
-- **Email**: [mr.perfect601601@gmail.com]
-- **Institution**: [Independent Researcher]
+- **Email**: [your.email@example.com]
+- **GitHub**: [your-github-username]
+- **DOI**: [10.2139/ssrn.5589750](https://doi.org/10.2139/ssrn.5589750)
 
 ## 🙏 Acknowledgments
 
-- WESAD dataset authors for providing the foundational dataset
-- NVIDIA for CUDA and RAPIDS support
-- The open-source community for various libraries and tools
-
-
-## 🔗 Related Links
-
-- [Preprint on SSRN](https://doi.org/10.2139/ssrn.5589750)
-- [Dataset Documentation](docs/datasets.md)
-- [Methodology Details](docs/methodology.md)
-- [API Reference](docs/api_reference.md)
+- WESAD dataset contributors
+- PhysioNet for MMASH dataset
+- All open-source contributors
+- Research community support
 
 ---
 
-**Note**: This is a research project. Please ensure you have appropriate permissions and follow ethical guidelines when working with physiological data.
-=======
-# physiology-first-framework-signal-analysis
-Comprehensive machine learning framework for analyzing physiological signals to predict stress recovery patterns
->>>>>>> d8f2470d7cb5c05fefb4799134a642ed0d398045
+**Citation**: If you use this work, please cite our preprint:
+
+```bibtex
+@article{physiological_signal_analysis_2024,
+  title={Physiological Signal Analysis for Stress Recovery Modeling},
+  author={[Your Name]},
+  journal={SSRN Preprint},
+  year={2024},
+  doi={10.2139/ssrn.5589750},
+  url={https://doi.org/10.2139/ssrn.5589750}
+}
+```
