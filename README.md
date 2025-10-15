@@ -214,9 +214,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Author**: [Your Name]
-- **Email**: [your.email@example.com]
-- **Institution**: [Your Institution]
+- **Author**: [LI PENG]
+- **Email**: [mr.perfect601601@gmail.com]
+- **Institution**: [Independent Researcher]
 
 ## 🙏 Acknowledgments
 
@@ -224,19 +224,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - NVIDIA for CUDA and RAPIDS support
 - The open-source community for various libraries and tools
 
-## 📚 Citation
-
-If you use this code in your research, please cite our preprint:
-
-```bibtex
-@article{your_paper_2024,
-  title={Physiological Signal Analysis for Stress Recovery Modeling},
-  author={Your Name},
-  journal={SSRN Preprint},
-  year={2024},
-  doi={10.2139/ssrn.5589750}
-}
-```
 
 ## 🔗 Related Links
 
