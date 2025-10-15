@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Physiological Signal Analysis for Stress Recovery Modeling
 
 [![DOI](https://img.shields.io/badge/DOI-10.2139%2Fssrn.5589750-blue)](https://doi.org/10.2139/ssrn.5589750)
