@@ -1,4 +1,4 @@
-# Physiological Signal Analysis for Stress Recovery Modeling
+# A Physiology-First, Execution-Efficiency Framework for Psychiatric Disorders: Retraining Intact Learning Trajectories
 
 [![DOI](https://img.shields.io/badge/DOI-10.2139%2Fssrn.5589750-blue)](https://doi.org/10.2139/ssrn.5589750)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -8,6 +8,8 @@
 ## 📖 Publication
 
 **Preprint Available**: [SSRN Preprint](https://doi.org/10.2139/ssrn.5589750)
+
+**Title**: A Physiology-First, Execution-Efficiency Framework for Psychiatric Disorders: Retraining Intact Learning Trajectories
 
 This repository contains the complete code, data, and analysis for our research on physiological signal analysis for stress recovery modeling. The work has been submitted and is available as a preprint.
 
@@ -50,26 +52,52 @@ This project implements a comprehensive machine learning framework for analyzing
    - W(t) stress accumulation theory
    - Dynamic learning parameter optimization
 
-## 📦 Complete Download Package - 8 Core Components
+## 📦 Complete Download Package - 15 Core Components
 
 ### 🔬 Core Algorithms & Scripts
-- **Core Algorithms**: [scripts_core.zip](data_analysis/scripts/scripts_core.zip) (70 algorithm files)
-- **WESAD Scripts**: [wesad_scripts.zip](wesad_analysis/scripts/wesad_scripts.zip) (analysis scripts)
+- **Core Algorithms**: [scripts_core.zip](data_analysis/scripts/scripts_core.zip) (70 algorithm files, 403KB)
+- **WESAD Scripts**: [wesad_scripts.zip](wesad_analysis/scripts/wesad_scripts.zip) (analysis scripts, 94KB)
 
 ### 🤖 Trained Models & Production Ready
-- **Trained Models**: [models_complete.zip](data_analysis/models/models_complete.zip) (production-ready models)
-- **Production Models**: [production_models.zip](data_analysis/models/production/production_models.zip) (model configurations)
-- **Complete Models**: [production_complete_models.zip](data_analysis/models/production_complete/production_complete_models.zip) (5 trained .pkl files)
+- **Trained Models**: [models_complete.zip](data_analysis/models/models_complete.zip) (production-ready models, 186KB)
+- **Production Models**: [production_models.zip](data_analysis/models/production/production_models.zip) (model configurations, 182KB)
+- **Complete Models**: [production_complete_models.zip](data_analysis/models/production_complete/production_complete_models.zip) (5 trained .pkl files, 3.4KB)
 
 ### 📊 Analysis Reports & Documentation
-- **WESAD Reports**: [wesad_reports.zip](wesad_analysis/wesad_reports.zip) (comprehensive analysis reports)
-- **Additional Reports**: [additional_reports.zip](additional_reports.zip) (validation & publication reports)
+- **WESAD Reports**: [wesad_reports.zip](wesad_analysis/wesad_reports.zip) (comprehensive analysis reports, 64KB)
+- **Additional Reports**: [additional_reports.zip](additional_reports.zip) (validation & publication reports, 7.7KB)
+- **All WESAD Reports**: [all_wesad_reports.zip](wesad_analysis/all_wesad_reports.zip) (40 analysis reports, 64KB)
 
 ### 📓 Jupyter Notebooks
-- **WESAD Notebooks**: [wesad_notebooks.zip](wesad_analysis/notebooks/wesad_notebooks.zip) (3 analysis notebooks)
+- **WESAD Notebooks**: [wesad_notebooks.zip](wesad_analysis/notebooks/wesad_notebooks.zip) (3 analysis notebooks, 1.7KB)
+
+### 🔬 Advanced Analysis Results
+- **Multimodal Fusion**: [multimodal_fusion_results.zip](wesad_analysis/multimodal_fusion_results/multimodal_fusion_results.zip) (17 files, 10.3MB)
+- **Advanced Analysis**: [advanced_analysis_results.zip](wesad_analysis/advanced_analysis_results/advanced_analysis_results.zip) (8 files, 775KB)
+
+### 📈 Theory Validation & Results
+- **Theory Validation**: [theory_validation_results.zip](wesad_analysis/theory_validation_results/theory_validation_results.zip) (49 files, 19.5MB)
+- **WESAD Results Part 1**: [wesad_results_part1.zip](wesad_analysis/results/wesad_results_part1.zip) (analysis results, 4.2MB)
+- **WESAD Results Part 2**: [wesad_results_part2_files.zip](wesad_analysis/results/wesad_results_part2_files.zip) (GPU training files, 1.6MB)
+- **WESAD Results Part 3**: [wesad_results_part2_weights.zip](wesad_analysis/results/wesad_results_part2_weights.zip) (model weights, 1.5MB)
+- **WESAD Results Part 4**: [wesad_results_part5_phase_abc.zip](wesad_analysis/results/wesad_results_part5_phase_abc.zip) (phase analysis, 1.9MB)
+- **WESAD Results Part 5**: [wesad_results_part4_logs.zip](wesad_analysis/results/wesad_results_part4_logs.zip) (training logs, 23.4MB)
+- **WESAD Results Part 6**: [wesad_results_part3_pytorch.zip](wesad_analysis/results/wesad_results_part3_pytorch.zip) (PyTorch results, 23.9MB)
+- **WESAD Results Part 7**: [wesad_results_part4_checkpoints.zip](wesad_analysis/results/wesad_results_part4_checkpoints.zip) (model checkpoints, 24.5MB)
+- **WESAD Results Part 8**: [wesad_results_resume_best_model.zip](wesad_analysis/results/wesad_results_resume_best_model.zip) (best model, 501KB)
+- **WESAD Results Part 9**: [wesad_results_resume_cache.zip](wesad_analysis/results/wesad_results_resume_cache.zip) (resume cache, 23.4MB)
+- **WESAD Results Part 10**: [wesad_results_resume_epochs.zip](wesad_analysis/results/wesad_results_resume_epochs.zip) (epoch checkpoints, 24.0MB)
+- **WESAD Results Part 11**: [wesad_results_cache_data.zip](wesad_analysis/results/wesad_results_cache_data.zip) (data cache, 24.0MB)
 
 ### 🗂️ Dataset Access
 Please refer to [DATA_ACCESS.md](DATA_ACCESS.md) for instructions on obtaining the 11 datasets used in this research.
+
+### 💾 Large Cache File (Available on Request)
+- **GPU Training Cache**: `full_data_cache.npz` (58MB) - Contains preprocessed training data for GPU acceleration
+  - **Location**: `wesad_analysis/results/LRI_Wt_GPU/checkpoints/full_data_cache.npz`
+  - **Purpose**: Accelerates GPU training by caching preprocessed data
+  - **Availability**: Contact author for download link (file too large for GitHub)
+  - **Alternative**: File will be automatically generated when running training scripts
 
 ## 🚀 Quick Start
 
@@ -92,8 +120,9 @@ Please refer to [DATA_ACCESS.md](DATA_ACCESS.md) for instructions on obtaining t
    ```
 
 3. **Download core components**:
-   - Download and extract all 8 ZIP files from the links above
+   - Download and extract all 15 ZIP files from the links above
    - Follow [DATA_ACCESS.md](DATA_ACCESS.md) to obtain datasets
+   - Contact author for `full_data_cache.npz` if needed for GPU acceleration
 
 4. **Run analysis**:
    ```bash
@@ -154,7 +183,26 @@ physiology-first-framework-signal-analysis/
     │   └── wesad_scripts.zip          # Download: Analysis scripts
     ├── notebooks/
     │   └── wesad_notebooks.zip        # Download: 3 analysis notebooks
-    └── wesad_reports.zip              # Download: Analysis reports
+    ├── multimodal_fusion_results/
+    │   └── multimodal_fusion_results.zip # Download: 17 fusion analysis files
+    ├── advanced_analysis_results/
+    │   └── advanced_analysis_results.zip # Download: 8 advanced analysis files
+    ├── theory_validation_results/
+    │   └── theory_validation_results.zip # Download: 49 validation files
+    ├── results/
+    │   ├── wesad_results_part1.zip    # Download: Analysis results
+    │   ├── wesad_results_part2_files.zip # Download: GPU training files
+    │   ├── wesad_results_part2_weights.zip # Download: Model weights
+    │   ├── wesad_results_part5_phase_abc.zip # Download: Phase analysis
+    │   ├── wesad_results_part4_logs.zip # Download: Training logs
+    │   ├── wesad_results_part3_pytorch.zip # Download: PyTorch results
+    │   ├── wesad_results_part4_checkpoints.zip # Download: Model checkpoints
+    │   ├── wesad_results_resume_best_model.zip # Download: Best model
+    │   ├── wesad_results_resume_cache.zip # Download: Resume cache
+    │   ├── wesad_results_resume_epochs.zip # Download: Epoch checkpoints
+    │   └── wesad_results_cache_data.zip # Download: Data cache
+    ├── wesad_reports.zip              # Download: Analysis reports
+    └── all_wesad_reports.zip          # Download: All analysis reports
 ```
 
 ## 🔬 Datasets
@@ -203,8 +251,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-- **Email**: [your.email@example.com]
-- **GitHub**: [your-github-username]
+- **Author**: PENG LI
+- **Affiliation**: Independent Researcher
+- **Email**: [mr.perfect601601@gmail.com](mailto:mr.perfect601601@gmail.com)
+- **GitHub**: [qd600600](https://github.com/qd600600)
 - **DOI**: [10.2139/ssrn.5589750](https://doi.org/10.2139/ssrn.5589750)
 
 ## 🙏 Acknowledgments
@@ -219,9 +269,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Citation**: If you use this work, please cite our preprint:
 
 ```bibtex
-@article{physiological_signal_analysis_2024,
-  title={Physiological Signal Analysis for Stress Recovery Modeling},
-  author={[Your Name]},
+@article{li2024physiology,
+  title={A Physiology-First, Execution-Efficiency Framework for Psychiatric Disorders: Retraining Intact Learning Trajectories},
+  author={Li, Peng},
   journal={SSRN Preprint},
   year={2024},
   doi={10.2139/ssrn.5589750},
