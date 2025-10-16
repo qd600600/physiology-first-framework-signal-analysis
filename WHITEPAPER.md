@@ -260,6 +260,9 @@ Discrete models showed consistently inferior performance:
 **Root Mean Square Error**: 0.156 ± 0.023
 **Mean Absolute Error**: 0.089 ± 0.015
 
+![Figure 3: W(t) Time Series Trajectories](figures/fig3_trajectories_timeseries.png)
+*Figure 3: W(t) Continuous Stress Trajectories. Decisive evidence for continuity across different stress accumulation patterns, showing smooth, continuous dynamics rather than discrete categorical states.*
+
 ### 4.2 Extreme Stratification Effects
 
 #### 4.2.1 Accumulation Rate Differences
