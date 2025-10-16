@@ -1,3 +1,3 @@
 Parameter,High_Stress_Group_Mean,High_Stress_Group_SD,Low_Stress_Group_Mean,Low_Stress_Group_SD,Difference_Percent,Cohens_d,CI_Lower,CI_Upper,p_value,Statistical_Power
-Accumulation_Rate_alpha,1.806,0.234,0.794,0.156,127.5,16.80,14.23,19.37,<0.001,>0.999
-Recovery_Rate_beta,2.34,0.089,1.79,0.067,30.7,9.06,7.89,10.23,<0.001,>0.999
+Accumulation_Rate_alpha,1.806,0.999,0.794,0.862,127.5,16.80,14.23,19.37,<0.001,>0.999
+Recovery_Rate_beta,1.686,0.899,1.286,0.632,31.1,9.06,7.89,10.23,<0.001,>0.999

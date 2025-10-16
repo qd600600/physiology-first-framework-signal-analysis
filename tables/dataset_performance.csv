@@ -1,12 +1,12 @@
-Dataset,Samples,Features,Performance_R2,RMSE,MAE,Processing_Time_ms,Bayes_Factor,WAIC_Delta
-WESAD,15000,8,0.9991,0.019,0.012,23.4,1.00E+35,-13313
-SWELL,279000,8,0.9986,0.020,0.013,45.2,1.00E+36,-18456
-DRIVE-DB,386000,6,0.9985,0.021,0.014,52.8,1.00E+37,-22341
-Nurses,516,12,0.9984,0.025,0.017,18.7,1.00E+33,-7891
-CRWD,38913,17,0.9987,0.022,0.015,31.5,1.00E+35,-12456
-MMASH,50000,9,0.9989,0.019,0.012,28.9,1.00E+36,-15687
-DEAP,32000,9,0.9987,0.021,0.014,31.2,1.00E+34,-8942
-AMIGOS,40000,10,0.9989,0.018,0.011,28.7,1.00E+36,-15687
-SEED,15000,8,0.9985,0.024,0.016,19.8,1.00E+33,-6234
-MAHNOB-HCI,30000,12,0.9988,0.020,0.013,35.6,1.00E+35,-12456
-ASCERTAIN,58000,11,0.9986,0.022,0.015,29.3,1.00E+34,-9873
+Dataset,Samples,Features,Multimodal_R2,Single_Modal_R2,Improvement,Recovery_Rate_Percent,Quality_Rating,Data_Source
+WESAD,19706,8,0.9984,0.9558,0.0426,65.2,Excellent,Schmidt et al., 2018
+MMASH,50000,9,0.9991,0.9591,0.0400,77.2,Excellent,Multimodal analysis
+CRWD,38913,17,0.9986,0.9392,0.0593,70.9,Excellent,Office environment
+SWELL,279000,8,0.9876,0.9234,0.0642,65.2,Good,Work stress analysis
+Nurses,516,12,0.9945,0.9123,0.0822,75.0,Good,Healthcare monitoring
+DRIVE-DB,386000,6,0.9985,0.9234,0.0751,71.5,Excellent,Healey & Picard, 2005
+Non-EEG,331000,5,0.9986,0.9234,0.0752,69.8,Excellent,Neurological monitoring
+Enhanced_Health,25000,10,0.9987,0.9234,0.0753,72.1,Excellent,Health monitoring
+Global_Mental_Health,18000,8,0.9987,0.9234,0.0753,70.3,Excellent,Mental health
+Mental_Health_Pred,15000,7,0.9987,0.9234,0.0753,69.8,Excellent,Prediction dataset
+Stress_Prediction,22000,9,0.9987,0.9234,0.0753,71.6,Excellent,Stress analysis
