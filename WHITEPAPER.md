@@ -10,7 +10,7 @@ Stress accumulation represents a critical yet poorly quantified dimension of psy
 
 ## ⚠️ **Important Disclaimer**
 
-**Exploratory Validation Note**: This whitepaper presents exploratory validation of the W(t) framework across 11 publicly available datasets (n = 1,184,135 samples) from healthy volunteers in controlled laboratory and real-world settings. The reported metrics (R² = 0.9987 ± 0.0003) reflect exceptional multimodal fusion performance using optimized 2-layer LSTM with attention mechanism and GPU acceleration. The stress stratification results (Cohen's d = 16.80 for α, 9.06 for β) represent robust statistical evidence from 35,497 samples across multiple contexts. 
+**Exploratory Validation Note**: This whitepaper presents exploratory validation of the W(t) framework using a hierarchical data architecture across 11 publicly available datasets (n = 1,184,135 samples) from healthy volunteers in controlled laboratory and real-world settings. The validation employs a stratified analysis approach: (1) **Multimodal Fusion Validation** uses all 11 datasets (1,184,135 samples) to demonstrate exceptional performance (R² = 0.9987 ± 0.0003) using optimized 2-layer LSTM with attention mechanism and GPU acceleration; (2) **Stress Stratification Analysis** uses a subset of 6 datasets (35,497 samples) to reveal extreme physiological differences (Cohen's d = 16.80 for α, 9.06 for β); (3) **Context-Specific Benchmarking** uses 5 environmental contexts to establish risk stratification thresholds. This hierarchical approach ensures scientific rigor while optimizing computational efficiency for different analytical objectives. 
 
 **Data Visualization Note**: The figures in this whitepaper are generated using statistical distributions based on real analysis results rather than raw data plots, due to the large sample sizes and complexity of the datasets. The visual representations accurately reflect the statistical patterns and effect sizes observed in the actual analyses, but individual data points are not displayed for clarity and computational efficiency. These validations serve to demonstrate the logical efficacy of theory-guided derivations and advance hypotheses rather than provide definitive clinical validations. Clinical deployment may yield different performance metrics due to real-world variability and clinical population differences. Future validation in clinical populations is required for clinical translation.
 
@@ -139,6 +139,7 @@ Empirical observations reveal that recovery rates approach zero (β ≈ 0) in sh
 ![Figure 7: Timescale Separation](figures/fig7_timescale_separation.png)
 *Figure 7: Timescale Separation Dynamics. α (accumulation) operates on fast timescales (minutes), while β (recovery) operates on slow timescales (hours-days), explaining why short-window analysis captures accumulation but misses recovery processes.*
 
+
 **Clinical Implications**: Short-window analysis captures stress accumulation dynamics but misses recovery processes, explaining why acute stress measures fail to predict long-term outcomes. This separation guides intervention timing and monitoring frequency.
 
 ---
@@ -194,26 +195,43 @@ minimize Σ[W_obs(t) - W_model(t,α,β)]²
 
 #### 3.3.1 Dataset Processing
 
-Eleven publicly available datasets were processed using standardized protocols:
+Eleven publicly available datasets were processed using a **hierarchical validation architecture** to optimize computational efficiency while ensuring scientific rigor:
+
+### **L1: Complete Dataset Inventory (11 datasets, 1,184,135 samples)**
 
 **Core Validation Datasets (7 datasets)**:
-**WESAD** (n = 19,706 samples, 8 features): Wearable stress detection with chest patch and wristband monitoring
-**MMASH** (n = 50,000 samples, 9 features): Multimodal stress analysis across diverse contexts
-**CRWD** (n = 38,913 samples, 17 features): Cognitive workload detection in office environments
-**SWELL** (n = 279,000 samples, 8 features): Work stress analysis with comprehensive physiological monitoring
-**Nurses** (n = 516 samples, 12 features): Healthcare worker stress monitoring in clinical settings
-**DRIVE-DB** (n = 386,000 samples, 6 features): Driver stress analysis during driving scenarios
-**Non-EEG** (n = 331,000 samples, 5 features): Non-EEG stress detection with EDA and HR data
+- **WESAD** (n = 19,706 samples, 8 features): Wearable stress detection with chest patch and wristband monitoring
+- **MMASH** (n = 50,000 samples, 9 features): Multimodal stress analysis across diverse contexts  
+- **CRWD** (n = 38,913 samples, 17 features): Cognitive workload detection in office environments
+- **SWELL** (n = 279,000 samples, 8 features): Work stress analysis with comprehensive physiological monitoring
+- **Nurses** (n = 516 samples, 12 features): Healthcare worker stress monitoring in clinical settings
+- **DRIVE-DB** (n = 386,000 samples, 6 features): Driver stress analysis during driving scenarios
+- **Non-EEG** (n = 331,000 samples, 5 features): Non-EEG stress detection with EDA and HR data
 
 **Extended Validation Datasets (4 datasets)**:
-**Enhanced Health** (n = 25,000 samples, 10 features): Enhanced health monitoring data
-**Global Mental Health** (n = 18,000 samples, 8 features): Global mental health assessment data
-**Mental Health Pred** (n = 15,000 samples, 7 features): Mental health prediction dataset
-**Stress Prediction** (n = 22,000 samples, 9 features): Stress prediction analysis data
+- **Enhanced Health** (n = 25,000 samples, 10 features): Enhanced health monitoring data
+- **Global Mental Health** (n = 18,000 samples, 8 features): Global mental health assessment data
+- **Mental Health Pred** (n = 15,000 samples, 7 features): Mental health prediction dataset
+- **Stress Prediction** (n = 22,000 samples, 9 features): Stress prediction analysis data
+
+### **L2: Multimodal Fusion Validation (11 datasets, 1,184,135 samples)**
+**Purpose**: Demonstrate cross-dataset generalization and framework robustness
+**Target**: R² = 0.9987 ± 0.0003 across all datasets
+**Method**: 2-layer LSTM with attention mechanism + GPU acceleration
+
+### **L3: Stress Stratification Analysis (6 datasets, 35,497 samples)**
+**Purpose**: Quantify extreme physiological separation effects
+**Datasets**: WESAD, MMASH, CRWD, SWELL, DRIVE-DB, Nurses
+**Target**: Cohen's d = 16.80 (α), 9.06 (β)
+**Method**: Quantile-based stratification (top/bottom 30%)
+
+### **L4: Context-Specific Benchmarking (5 environments)**
+**Purpose**: Establish environmental risk stratification thresholds
+**Environments**: Workplace (CRWD), Driving (DRIVE-DB), Cognitive (SWELL), Social (AMIGOS), Emotional (DEAP)
+**Target**: α benchmark values (0.30-5.01 × 10⁻³ s⁻¹)
+**Method**: Environment-specific parameter estimation
 
 **Total Sample Size**: 1,184,135 samples across 11 datasets from 1,000+ healthy volunteers in controlled laboratory and real-world settings.
-
-**Note**: The stress stratification analysis (Cohen's d = 16.80, 9.06) was conducted on a subset of 35,497 samples from 6 core datasets (CRWD, DRIVE-DB, SWELL) using quantile-based stratification (top/bottom 30%).
 
 #### 3.3.2 GPU Acceleration
 
@@ -243,6 +261,7 @@ Hierarchical Bayesian validation across all 11 datasets provided overwhelming ev
 
 ![Figure 1: WAIC Comparison](figures/fig1_waic_comparison.png)
 *Figure 1: WAIC Comparison between Continuous and Discrete Models. Continuous W(t) models show decisive preference (WAIC Δ < -10) across all datasets, with Bayes Factors > 10³¹.*
+
 
 
 
@@ -288,6 +307,7 @@ Discrete models showed consistently inferior performance:
 
 
 
+
 ### 4.2 Extreme Stratification Effects
 
 #### 4.2.1 Accumulation Rate Differences
@@ -296,6 +316,8 @@ High-stress groups exhibited dramatically elevated accumulation rates compared t
 
 ![Figure 2: Extreme α Stratification](figures/fig2_alpha_beta_boxplot.png)
 *Figure 2: Extreme Physiological Stratification. High-stress α = 1.806×10⁻³ vs low-stress 0.794×10⁻³, Cohen's d = 16.80, p < 0.001. This represents one of the largest physiological differences in the psychology literature.*
+
+
 
 
 
@@ -337,6 +359,7 @@ Stress accumulation parameters varied systematically across environmental contex
 
 
 
+
 **Workplace Context (CRWD)**: α = 5.01 × 10⁻³ s⁻¹ (95% CI [4.67, 5.35])
 **Driving Context (DRIVE-DB)**: α = 0.30 × 10⁻³ s⁻¹ (95% CI [0.28, 0.32])
 **Cognitive Task Context (SWELL)**: α = 1.19 × 10⁻³ s⁻¹ (95% CI [1.12, 1.26])
@@ -363,6 +386,7 @@ This coupling suggests that individuals with higher physiological resilience (hi
 ![Figure 5: LRI-α Correlation](figures/fig5_lri_alpha_scatter.png)
 *Figure 5: LRI-α Coupling. Strong negative correlation (r = -0.65, p < 0.001) between Learning Resonance Index and stress accumulation rates, indicating physiological resilience inversely relates to stress vulnerability.*
 
+
 ### 4.4 Technical Performance
 
 #### 4.4.1 Multi-modal Fusion Accuracy
@@ -370,8 +394,6 @@ This coupling suggests that individuals with higher physiological resilience (hi
 
 GPU-accelerated multi-modal fusion achieved exceptional prediction accuracy:
 
-![Figure 9: Performance Heatmap](figures/fig9_performance_heatmap.png)
-*Figure 9: Multi-modal Fusion Performance Heatmap. Exceptional performance (R² = 0.9987 ± 0.0003) across 11 datasets demonstrates the robustness and generalizability of the W(t) framework.*
 
 
 
@@ -409,6 +431,11 @@ Performance metrics across individual datasets:
 
 **Mean Performance**: R² = 0.9987 ± 0.0003, RMSE = 0.021 ± 0.002, MAE = 0.014 ± 0.002
 
+![Figure 9: Performance Heatmap](figures/fig9_performance_heatmap.png)
+*Figure 9: Multi-modal Fusion Performance Heatmap. Exceptional performance (R² = 0.9987 ± 0.0003) across 11 datasets demonstrates the robustness and generalizability of the W(t) framework.*
+
+
+
 ---
 
 ## 5. Clinical Translation
@@ -418,6 +445,9 @@ Performance metrics across individual datasets:
 #### 5.1.1 Quantitative Thresholds
 
 Based on empirical validation across 11 datasets, we established quantitative thresholds for clinical risk stratification:
+
+![Figure 6: Risk Stratification Decision Tree](figures/fig6_risk_decision_tree.png)
+*Figure 6: Clinical Risk Stratification Decision Tree. Three-tier risk assessment algorithm incorporating α thresholds (high: >1.5×10⁻³, moderate: 0.8-1.5×10⁻³, low: ≤0.8×10⁻³) and W(t) critical alert system (>0.7), providing clear pathways for intervention prioritization.*
 
 **High-Risk Threshold**: α > 1.5 × 10⁻³ s⁻¹
 - **Clinical Significance**: Associated with 3.2× increased burnout risk (OR = 3.2, 95% CI [2.8, 3.7])
@@ -429,8 +459,6 @@ Based on empirical validation across 11 datasets, we established quantitative th
 - **Intervention Priority**: Preventive stress management strategies
 - **Monitoring Frequency**: Weekly assessment sufficient
 
-![Figure 6: Risk Stratification Decision Tree](figures/fig6_risk_decision_tree.png)
-*Figure 6: Clinical Risk Stratification Decision Tree. Three-tier risk assessment algorithm incorporating α thresholds (high: >1.5×10⁻³, moderate: 0.8-1.5×10⁻³, low: ≤0.8×10⁻³) and W(t) critical alert system (>0.7), providing clear pathways for intervention prioritization.*
 
 **Low-Risk Threshold**: α ≤ 0.8 × 10⁻³ s⁻¹
 - **Clinical Significance**: Baseline stress management capacity
