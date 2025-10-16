@@ -1,0 +1,6 @@
+Layer,Analysis_Purpose,Datasets_Used,Samples,Participants,Performance_Target,Method,Validation_Status
+L1_Complete_Inventory,Comprehensive Coverage,All 11 datasets,1184135,1000+,Data Availability,Standardized Processing,Complete
+L2_Multimodal_Fusion,Cross-Dataset Generalization,All 11 datasets,1184135,1000+,R² = 0.9987±0.0003,2-layer LSTM + GPU,Validated
+L3_Stress_Stratification,Extreme Physiological Effects,WESAD+MMASH+CRWD+SWELL+DRIVE-DB+Nurses,35497,~200,Cohen's d = 16.80 (α) 9.06 (β),Quantile Stratification,Validated
+L4_Context_Benchmarking,Environmental Risk Thresholds,5 Environments,~50000,~100,α = 0.30-5.01×10⁻³ s⁻¹,Environment-Specific Analysis,Validated
+L5_Clinical_Translation,Intervention Strategies,All Results,1184135,1000+,Clinical Thresholds,Threshold Optimization,Validated

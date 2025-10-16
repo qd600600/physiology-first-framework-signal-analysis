@@ -1,12 +1,12 @@
-Dataset,Samples,Features,Multimodal_R2,Single_Modal_R2,Improvement,Recovery_Rate_Percent,Quality_Rating,Data_Source
-WESAD,19706,8,0.9984,0.9558,0.0426,65.2,Excellent,Schmidt et al., 2018
-MMASH,50000,9,0.9991,0.9591,0.0400,77.2,Excellent,Multimodal analysis
-CRWD,38913,17,0.9986,0.9392,0.0593,70.9,Excellent,Office environment
-SWELL,279000,8,0.9876,0.9234,0.0642,65.2,Good,Work stress analysis
-Nurses,516,12,0.9945,0.9123,0.0822,75.0,Good,Healthcare monitoring
-DRIVE-DB,386000,6,0.9985,0.9234,0.0751,71.5,Excellent,Healey & Picard, 2005
-Non-EEG,331000,5,0.9986,0.9234,0.0752,69.8,Excellent,Neurological monitoring
-Enhanced_Health,25000,10,0.9987,0.9234,0.0753,72.1,Excellent,Health monitoring
-Global_Mental_Health,18000,8,0.9987,0.9234,0.0753,70.3,Excellent,Mental health
-Mental_Health_Pred,15000,7,0.9987,0.9234,0.0753,69.8,Excellent,Prediction dataset
-Stress_Prediction,22000,9,0.9987,0.9234,0.0753,71.6,Excellent,Stress analysis
+Dataset,Samples,Features,Validation_Layer,Analysis_Purpose,Multimodal_R2,Single_Modal_R2,Improvement,Recovery_Rate_Percent,Quality_Rating,Data_Source
+WESAD,19706,8,L2+L3,Multimodal Fusion + Stratification,0.9984,0.9558,0.0426,65.2,Excellent,Schmidt et al., 2018
+MMASH,50000,9,L2+L3,Multimodal Fusion + Stratification,0.9991,0.9591,0.0400,77.2,Excellent,Multimodal analysis
+CRWD,38913,17,L2+L3+L4,All Validation Layers,0.9986,0.9392,0.0593,70.9,Excellent,Office environment
+SWELL,279000,8,L2+L3+L4,All Validation Layers,0.9876,0.9234,0.0642,65.2,Good,Work stress analysis
+Nurses,516,12,L2+L3,Multimodal Fusion + Stratification,0.9945,0.9123,0.0822,75.0,Good,Healthcare monitoring
+DRIVE-DB,386000,6,L2+L3+L4,All Validation Layers,0.9985,0.9234,0.0751,71.5,Excellent,Healey & Picard, 2005
+Non-EEG,331000,5,L2,Multimodal Fusion Only,0.9986,0.9234,0.0752,69.8,Excellent,Neurological monitoring
+Enhanced_Health,25000,10,L2,Multimodal Fusion Only,0.9987,0.9234,0.0753,72.1,Excellent,Health monitoring
+Global_Mental_Health,18000,8,L2,Multimodal Fusion Only,0.9987,0.9234,0.0753,70.3,Excellent,Mental health
+Mental_Health_Pred,15000,7,L2,Multimodal Fusion Only,0.9987,0.9234,0.0753,69.8,Excellent,Prediction dataset
+Stress_Prediction,22000,9,L2,Multimodal Fusion Only,0.9987,0.9234,0.0753,71.6,Excellent,Stress analysis
