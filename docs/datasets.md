@@ -10,7 +10,7 @@ This document provides comprehensive information about all 11 datasets used in t
 | 2 | MMASH | 50,000 | 9 | ~200MB | Multimodal stress analysis | ✅ Complete |
 | 3 | CRWD | 38,913 | 17 | ~100MB | Cognitive workload detection | ✅ Complete |
 | 4 | SWELL | 279,000 | 8 | ~1.2GB | Work stress analysis | ✅ Complete |
-| 5 | Nurses | 516 | 12 | ~50MB | Healthcare worker stress | ✅ Complete |
+| 5 | Nurses | 516 | 12 | ~1.1GB | Healthcare worker stress | ✅ Complete |
 | 6 | DRIVE-DB | 386,000 | 6 | ~1.5GB | Driver stress analysis | ✅ Complete |
 | 7 | Non-EEG | 331,000 | 5 | ~100MB | Non-electroencephalographic | ✅ Complete |
 | 8 | Enhanced Health | 25,000 | 10 | ~80MB | Enhanced health dataset | ✅ Complete |
