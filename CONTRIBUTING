@@ -6,7 +6,7 @@ Thank you for your interest in contributing to this project! This document provi
 
 ### Prerequisites
 
-- Python 3.8 or higher
+- Python 3.12+
 - Git
 - Basic understanding of physiological signal analysis
 
@@ -15,8 +15,8 @@ Thank you for your interest in contributing to this project! This document provi
 1. **Fork the repository**
    ```bash
    # Fork on GitHub, then clone your fork
-   git clone https://github.com/yourusername/physiological-signal-analysis.git
-   cd physiological-signal-analysis
+   git clone https://github.com/qd600600/physiology-first-framework-signal-analysis.git
+   cd physiology-first-framework-signal-analysis
    ```
 
 2. **Create a virtual environment**
