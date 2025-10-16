@@ -68,13 +68,15 @@ This directory contains the 9 publication-quality figures for the W(t) Stress Ac
 
 ## Data Sources
 
-- Performance metrics from 11 publicly available datasets
-- Statistical results from hierarchical Bayesian validation
-- Clinical thresholds from empirical risk stratification analysis
-- Intervention effects from simulated intervention studies
+- **L1 Complete Inventory**: Performance metrics from 11 publicly available datasets (1,184,135 samples)
+- **L2 Multimodal Fusion**: Statistical results from hierarchical Bayesian validation across all datasets
+- **L3 Stress Stratification**: Clinical thresholds from empirical risk stratification analysis (6 datasets, 35,497 samples)
+- **L4 Context Benchmarking**: Environmental risk thresholds from context-specific analysis (5 environments)
+- **L5 Clinical Translation**: Intervention effects from simulated intervention studies
 
 ## Citation
 
 When using these figures, please cite the W(t) framework whitepaper:
 
 Li, P. (2025). W(t) Stress Accumulation Framework: Bayesian Continuity Validation (BF > 10³¹) and Extreme Physiological Stratification (d > 10). Technical Whitepaper. DOI: 10.2139/ssrn.5589750
+
