@@ -1,42 +1,80 @@
-# GitHub上传说明
+# Upload Instructions
 
-## 📦 项目文件上传
+## 📦 Project File Upload
 
-由于项目文件较大（包含大量数据集和分析脚本），我们采用了分步上传的方式：
+Due to the large size of the project files (including extensive datasets and analysis scripts), we have adopted a step-by-step upload approach:
 
-### 第一步：上传核心文件（当前压缩包）
-这个压缩包包含：
-- ✅ 项目文档和说明
-- ✅ 依赖配置文件
-- ✅ 核心Python脚本
-- ✅ 论文相关信息
-- ✅ 使用示例
+### Step 1: Upload Core Files (Current Package)
+This package contains:
+- ✅ Project documentation and instructions
+- ✅ Dependency configuration files
+- ✅ Core Python scripts
+- ✅ Paper-related information
+- ✅ Usage examples
 
-### 第二步：获取完整代码库
-完整的项目代码库包含：
-- 📁 `data_analysis/` - 主分析项目（84个Python脚本）
-- 📁 `wesad_analysis/` - 扩展验证项目（11个数据集分析）
-- 📊 完整的数据集和处理结果
-- 🤖 训练好的模型文件
+### Step 2: Get Complete Codebase
+The complete project codebase includes:
+- 📁 `data_analysis/` - Main analysis project (90 Python scripts)
+- 📁 `wesad_analysis/` - Extended validation project (11 datasets analysis)
+- 📊 Complete datasets and processing results
+- 🤖 Trained model files
 
-### 如何获取完整代码：
-1. **克隆仓库后**，联系项目维护者获取完整数据集
-2. **或者**，访问项目的完整代码库：`D:\data_analysis_github`
+### How to Get Complete Code:
+1. **After cloning the repository**, contact the project maintainer for complete datasets
+2. **Or**, access the complete codebase at: `D:\data_analysis_github`
 
-### 项目统计：
-- 📄 **总文件数**: 415个文件
-- 💻 **代码行数**: 64,801,508行
-- 🗂️ **数据集**: 11个生理信号数据集
-- 📈 **性能**: R² = 0.9987 ± 0.0003
+### Project Statistics:
+- 📄 **Total Files**: 415+ files
+- 💻 **Code Lines**: 64,801,508+ lines
+- 🗂️ **Datasets**: 11 physiological signal datasets
+- 📈 **Performance**: R² = 0.9987 ± 0.0003
 
-### 快速开始：
-```bash
-# 安装依赖
-pip install -r requirements_unified.txt
+## 📊 **Current Upload Status**
 
-# 运行示例
-python examples/quick_start.py
-```
+### ✅ **Successfully Uploaded**:
+- **29 ZIP Files**: All core components uploaded
+- **Core Algorithms**: 90 Python scripts
+- **Trained Models**: Production-ready models
+- **Analysis Results**: Complete validation results
+- **Documentation**: Comprehensive project documentation
 
-### 联系信息：
-如有问题，请通过GitHub Issues联系项目维护者。
+### 📋 **Upload Summary**:
+- **Total Components**: 29 ZIP packages
+- **Project Size**: ~56MB (optimized for GitHub)
+- **Ready for Use**: All essential components available
+
+## 🚀 **Quick Start After Upload**
+
+1. **Clone Repository**:
+   ```bash
+   git clone https://github.com/qd600600/physiology-first-framework-signal-analysis.git
+   cd physiology-first-framework-signal-analysis
+   ```
+
+2. **Install Dependencies**:
+   ```bash
+   pip install -r requirements_unified.txt
+   ```
+
+3. **Extract ZIP Files**:
+   - Download and extract all 29 ZIP files
+   - Follow the extraction guide in README.md
+
+4. **Run Analysis**:
+   ```bash
+   python examples/quick_start.py
+   ```
+
+## 📞 **Contact Information**
+
+For questions about the complete project or datasets:
+- **Email**: mr.perfect601601@gmail.com
+- **GitHub**: qd600600
+- **Paper**: [SSRN Preprint](https://doi.org/10.2139/ssrn.5589750)
+
+## 📝 **Notes**
+
+- All uploaded files are ready for immediate use
+- Large datasets (>100MB) are available upon request
+- Complete project documentation is included in uploaded ZIP files
+- GPU acceleration requires CUDA 12.8+
