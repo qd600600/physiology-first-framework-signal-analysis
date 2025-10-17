@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this whitepaper, please cite it as below."
-title: "W(t) Stress Accumulation Framework Whitepaper v1.0"
+title: "Physiology-First Framework Whitepaper v1.0"
 authors:
 - family-names: "Li"
   given-names: "Peng"
@@ -12,8 +12,9 @@ version: "1.0.0"
 license: "MIT"
 url: "https://github.com/qd600600/physiology-first-framework-signal-analysis"
 repository-code: "https://github.com/qd600600/physiology-first-framework-signal-analysis"
-abstract: "Stress accumulation represents a critical yet poorly quantified dimension of psychiatric risk stratification. Current models rely on discrete categorical classifications that fail to capture the continuous, dynamic nature of stress physiology. Here, we present the W(t) bounded accumulation framework, a novel differential equation model that quantifies stress dynamics through continuous temporal integration. Using hierarchical validation architecture across 11 publicly available datasets (n = 1,184,135 samples from 1,000+ participants), we demonstrate decisive evidence for continuity over discrete models (WAIC Δ < -10 across all datasets). Extreme stratification effects reveal unprecedented physiological separation: high-stress groups exhibit 127% higher accumulation rates (α = 1.806 vs 0.794 × 10⁻³ s⁻¹, Cohen's d = 16.80) and 31% enhanced recovery rates (β, d = 9.06) using 6 datasets (~239,000 samples). Context-specific benchmarks identify workplace environments as highest risk (α = 5.01 × 10⁻³ s⁻¹) versus driving contexts (α = 0.30 × 10⁻³ s⁻¹). Multi-modal fusion achieves exceptional prediction accuracy (R² = 0.9987 ± 0.0003) using GPU-accelerated processing. Clinical translation yields actionable thresholds: α > 1.5 × 10⁻³ s⁻¹ indicates high-risk stratification, with β-boost interventions (sleep optimization, mindfulness, recovery environments) showing priority over stress reduction strategies. These findings establish the first quantitative physiological benchmarks for stress stratification and provide a computational framework for precision psychiatry that moves beyond symptom-based classification toward mechanism-driven intervention."
+abstract: "Stress accumulation represents a critical yet poorly quantified dimension of psychiatric risk stratification. Current models rely on discrete categorical classifications that fail to capture the continuous, dynamic nature of stress physiology. Here, we present the Physiology-First Framework, featuring the W(t) bounded accumulation model and LRI (Learning Resonance Index) for comprehensive stress dynamics quantification through continuous temporal integration. Using hierarchical validation architecture across 11 publicly available datasets (n = 1,184,135 samples from 1,000+ participants), we demonstrate decisive evidence for continuity over discrete models (WAIC Δ < -10 across all datasets). Extreme stratification effects reveal unprecedented physiological separation: high-stress groups exhibit 127% higher accumulation rates (α = 1.806 vs 0.794 × 10⁻³ s⁻¹, Cohen's d = 16.80) and 31% enhanced recovery rates (β, d = 9.06) using 6 datasets (~239,000 samples). Context-specific benchmarks identify workplace environments as highest risk (α = 5.01 × 10⁻³ s⁻¹) versus driving contexts (α = 0.30 × 10⁻³ s⁻¹). Multi-modal fusion achieves exceptional prediction accuracy (R² = 0.9987 ± 0.0003) using GPU-accelerated processing. Clinical translation yields actionable thresholds: α > 1.5 × 10⁻³ s⁻¹ indicates high-risk stratification, with β-boost interventions (sleep optimization, mindfulness, recovery environments) showing priority over stress reduction strategies. These findings establish the first quantitative physiological benchmarks for stress stratification and provide a computational framework for precision psychiatry that moves beyond symptom-based classification toward mechanism-driven intervention."
 keywords:
+- "physiology-first framework"
 - "stress accumulation"
 - "hierarchical validation"
 - "physiological stratification"
@@ -31,7 +32,7 @@ preferred-citation:
     given-names: "PENG"
     email: "mr.perfect601601@gmail.com"
     affiliation: "Independent Researcher"
-  title: "W(t) Stress Accumulation Framework: Hierarchical Validation Architecture (WAIC Δ < -10) and Extreme Physiological Stratification (d > 16)"
+  title: "Physiology-First Framework: Hierarchical Validation Architecture (WAIC Δ < -10) and Extreme Physiological Stratification (d > 16)"
   journal: "Technical Whitepaper"
   date: "2025-10-16"
   url: "https://github.com/qd600600/physiology-first-framework-signal-analysis/blob/main/WHITEPAPER.md"

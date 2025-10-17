@@ -1,16 +1,16 @@
-# W(t) Stress Accumulation Framework: Exploratory Validation Across 11 Datasets with Multimodal Fusion (R² = 0.9987 ± 0.0003)
+# Physiology-First Framework: Exploratory Validation Across 11 Datasets with Multimodal Fusion (R² = 0.9987 ± 0.0003)
 
 ## Abstract
 
-Stress accumulation represents a critical yet poorly quantified dimension of psychiatric risk stratification. Current models rely on discrete categorical classifications that fail to capture the continuous, dynamic nature of stress physiology. Here, we present the W(t) bounded accumulation framework, a novel differential equation model that quantifies stress dynamics through continuous temporal integration: dW/dt = αS(t) - βW(t), where W(t) represents cumulative stress load, α denotes accumulation rate, β indicates recovery rate, and S(t) captures multi-modal physiological stress input. Using exploratory validation across 11 publicly available datasets (n = 1,184,135 samples from 1,000+ healthy participants), we demonstrate exceptional multimodal fusion performance with R² = 0.9987 ± 0.0003. Stress stratification analysis reveals extreme physiological differences: high-stress groups exhibit 127% higher accumulation rates (α = 1.806 vs 0.794, Cohen's d = 16.80) and 31% enhanced recovery rates (β = 1.686 vs 1.286, Cohen's d = 9.06). Context-specific benchmarks identify workplace environments as highest risk (α = 5.01 × 10⁻³ s⁻¹) versus driving contexts (α = 0.30 × 10⁻³ s⁻¹). Multimodal fusion achieves exceptional prediction accuracy (R² = 0.9987 ± 0.0003) using GPU-accelerated LSTM processing with 8× speedup. Clinical translation yields actionable thresholds: α > 1.5 × 10⁻³ s⁻¹ indicates high-risk stratification, with β-boost interventions (sleep optimization, mindfulness, recovery environments) showing priority over stress reduction strategies. These findings establish the first quantitative physiological benchmarks for stress stratification and provide a computational framework for precision psychiatry that moves beyond symptom-based classification toward mechanism-driven intervention.
+Stress accumulation represents a critical yet poorly quantified dimension of psychiatric risk stratification. Current models rely on discrete categorical classifications that fail to capture the continuous, dynamic nature of stress physiology. Here, we present the Physiology-First Framework, featuring the W(t) bounded accumulation model and LRI (Learning Resonance Index) for comprehensive stress dynamics quantification through continuous temporal integration: dW/dt = αS(t) - βW(t), where W(t) represents cumulative stress load, α denotes accumulation rate, β indicates recovery rate, and S(t) captures multi-modal physiological stress input. Using exploratory validation across 11 publicly available datasets (n = 1,184,135 samples from 1,000+ healthy participants), we demonstrate exceptional multimodal fusion performance with R² = 0.9987 ± 0.0003. Stress stratification analysis reveals extreme physiological differences: high-stress groups exhibit 127% higher accumulation rates (α = 1.806 vs 0.794, Cohen's d = 16.80) and 31% enhanced recovery rates (β = 1.686 vs 1.286, Cohen's d = 9.06). Context-specific benchmarks identify workplace environments as highest risk (α = 5.01 × 10⁻³ s⁻¹) versus driving contexts (α = 0.30 × 10⁻³ s⁻¹). Multimodal fusion achieves exceptional prediction accuracy (R² = 0.9987 ± 0.0003) using GPU-accelerated LSTM processing with 8× speedup. Clinical translation yields actionable thresholds: α > 1.5 × 10⁻³ s⁻¹ indicates high-risk stratification, with β-boost interventions (sleep optimization, mindfulness, recovery environments) showing priority over stress reduction strategies. These findings establish the first quantitative physiological benchmarks for stress stratification and demonstrate the efficacy of the Physiology-First Framework as a computational approach for precision psychiatry that moves beyond symptom-based classification toward mechanism-driven intervention.
 
-**Keywords**: stress accumulation, multimodal fusion, physiological stratification, burnout prediction, precision psychiatry, LSTM neural networks, GPU acceleration
+**Keywords**: physiology-first framework, stress accumulation, multimodal fusion, physiological stratification, burnout prediction, precision psychiatry, W(t) model, LRI, LSTM neural networks, GPU acceleration
 
 ---
 
 ## ⚠️ **Important Disclaimer**
 
-**Exploratory Validation Note**: This whitepaper presents exploratory validation of the W(t) framework using a hierarchical data architecture across 11 publicly available datasets (n = 1,184,135 samples) from healthy volunteers in controlled laboratory and real-world settings. The validation employs a stratified analysis approach: (1) **Multimodal Fusion Validation** uses all 11 datasets (1,184,135 samples) to demonstrate exceptional performance (R² = 0.9987 ± 0.0003) using optimized 2-layer LSTM with attention mechanism and GPU acceleration; (2) **Stress Stratification Analysis** uses a subset of 6 datasets (35,497 samples) to reveal extreme physiological differences (Cohen's d = 16.80 for α, 9.06 for β); (3) **Context-Specific Benchmarking** uses 5 environmental contexts to establish risk stratification thresholds. This hierarchical approach ensures scientific rigor while optimizing computational efficiency for different analytical objectives. 
+**Exploratory Validation Note**: This whitepaper presents exploratory validation of the Physiology-First Framework (including W(t) and LRI components) using a hierarchical data architecture across 11 publicly available datasets (n = 1,184,135 samples) from healthy volunteers in controlled laboratory and real-world settings. The validation employs a stratified analysis approach: (1) **Multimodal Fusion Validation** uses all 11 datasets (1,184,135 samples) to demonstrate exceptional performance (R² = 0.9987 ± 0.0003) using optimized 2-layer LSTM with attention mechanism and GPU acceleration; (2) **Stress Stratification Analysis** uses a subset of 6 datasets (~239,000 samples) to reveal extreme physiological differences (Cohen's d = 16.80 for α, 9.06 for β); (3) **Context-Specific Benchmarking** uses 5 environmental contexts to establish risk stratification thresholds. This hierarchical approach ensures scientific rigor while optimizing computational efficiency for different analytical objectives. 
 
 **Data Visualization Note**: The figures in this whitepaper are generated using statistical distributions based on real analysis results rather than raw data plots, due to the large sample sizes and complexity of the datasets. The visual representations accurately reflect the statistical patterns and effect sizes observed in the actual analyses, but individual data points are not displayed for clarity and computational efficiency. These validations serve to demonstrate the logical efficacy of theory-guided derivations and advance hypotheses rather than provide definitive clinical validations. Clinical deployment may yield different performance metrics due to real-world variability and clinical population differences. Future validation in clinical populations is required for clinical translation.
 
@@ -24,9 +24,9 @@ Contemporary psychiatric diagnosis relies fundamentally on discrete categorical 
 
 The scientific literature reveals a fundamental controversy: do stress responses represent discrete, categorical states or continuous, dynamic processes? Traditional models assume discrete transitions between "normal" and "pathological" stress states, yet mounting evidence suggests that stress accumulation follows continuous trajectories that can be mathematically modeled (Miller et al., 2023; Kudielka & Wüst, 2010; Chrousos, 2009). This controversy has profound implications for clinical practice, as discrete models fail to capture the gradual, cumulative nature of stress-related pathology (McEwen & Wingfield, 2003; Sapolsky et al., 2000).
 
-### 1.2 The W(t) Theoretical Contribution
+### 1.2 The Physiology-First Framework Theoretical Contribution
 
-We propose a paradigm shift toward dynamic systems psychiatry through the W(t) bounded accumulation framework. This model reconceptualizes psychiatric symptoms as emergent outcomes of intact learning mechanisms operating under maladaptive stress trajectories, rather than discrete disease entities. The framework provides two computational modules: (1) the Learning Resonance Index (LRI), a dimensional metric integrating physiological regulation, behavioral execution efficiency, and cognitive-emotional variability; and (2) the stress function W(t), a recursive model capturing cumulative stress exposure, recovery slope, and environmental modulators.
+We propose a paradigm shift toward dynamic systems psychiatry through the Physiology-First Framework. This framework reconceptualizes psychiatric symptoms as emergent outcomes of intact learning mechanisms operating under maladaptive stress trajectories, rather than discrete disease entities. The framework provides two integrated computational modules: (1) the Learning Resonance Index (LRI), a dimensional metric integrating physiological regulation, behavioral execution efficiency, and cognitive-emotional variability; and (2) the stress function W(t), a recursive model capturing cumulative stress exposure, recovery slope, and environmental modulators.
 
 The W(t) model represents the first systematic attempt to quantify continuous stress dynamics through differential equation modeling, providing unprecedented empirical validation of continuity over discrete frameworks. This mathematical formalization enables precision measurement of stress accumulation patterns, recovery trajectories, and individual vulnerability profiles that transcend traditional diagnostic boundaries.
 
@@ -38,7 +38,7 @@ The absence of objective, continuous stress metrics creates several clinical bli
 
 ### 1.4 Research Development Process
 
-This study represents the culmination of a multi-phase research process involving iterative refinement of computational environments, methodological approaches, and validation strategies. The final results emerged from systematic exploration of multiple technical configurations, each contributing to our understanding of the optimal approach for W(t) framework validation.
+This study represents the culmination of a multi-phase research process involving iterative refinement of computational environments, methodological approaches, and validation strategies. The final results emerged from systematic exploration of multiple technical configurations, each contributing to our understanding of the optimal approach for Physiology-First Framework validation.
 
 **Research Phases**:
 - **Phase 1**: Methodological exploration and initial dataset validation
@@ -55,7 +55,7 @@ This investigation addresses four fundamental questions:
 
 3. **Context Specificity**: How do stress accumulation parameters (α, β) vary across different environmental contexts, and what are the quantitative benchmarks for risk stratification?
 
-4. **Clinical Translation**: Can the W(t) framework provide actionable clinical thresholds and intervention prioritization strategies for precision psychiatry?
+4. **Clinical Translation**: Can the Physiology-First Framework provide actionable clinical thresholds and intervention prioritization strategies for precision psychiatry?
 
 ---
 
@@ -211,7 +211,7 @@ minimize Σ[W_obs(t) - W_model(t,α,β)]²
 
 Eleven publicly available datasets were processed using a **hierarchical validation architecture** to optimize computational efficiency while ensuring scientific rigor:
 
-### **L1: Complete Dataset Inventory (11 datasets, 1,184,135 samples)**
+#### **L1: Complete Dataset Inventory (11 datasets, 1,184,135 samples)**
 
 **Core Validation Datasets (7 datasets)**:
 - **WESAD** (n = 19,706 samples, 8 features): Wearable stress detection with chest patch and wristband monitoring
@@ -228,19 +228,19 @@ Eleven publicly available datasets were processed using a **hierarchical validat
 - **Mental Health Pred** (n = 15,000 samples, 7 features): Mental health prediction dataset
 - **Stress Prediction** (n = 22,000 samples, 9 features): Stress prediction analysis data
 
-### **L2: Multimodal Fusion Validation (11 datasets, 1,184,135 samples)**
+#### **L2: Multimodal Fusion Validation (11 datasets, 1,184,135 samples)**
 **Purpose**: Demonstrate cross-dataset generalization and framework robustness
 **Target**: R² = 0.9987 ± 0.0003 across all datasets
 **Method**: 2-layer LSTM with attention mechanism + GPU acceleration
 
-### **L3: Stress Stratification Analysis (6 datasets, ~239,000 samples)**
+#### **L3: Stress Stratification Analysis (6 datasets, ~239,000 samples)**
 **Purpose**: Quantify extreme physiological separation effects
 **Datasets**: WESAD, MMASH, CRWD, SWELL, DRIVE-DB, Nurses
 **Target**: Cohen's d = 16.80 (α), 9.06 (β)
 **Method**: Quantile-based stratification (top/bottom 30%)
 **Note**: Sample count includes processed data after quality control and preprocessing
 
-### **L4: Context-Specific Benchmarking (5 environments)**
+#### **L4: Context-Specific Benchmarking (5 environments)**
 **Purpose**: Establish environmental risk stratification thresholds
 **Environments**: Workplace (CRWD), Driving (DRIVE-DB), Cognitive (SWELL), Social (AMIGOS), Emotional (DEAP)
 **Target**: α benchmark values (0.30-5.01 × 10⁻³ s⁻¹)
@@ -317,7 +317,7 @@ def solve_wt_equation(alpha, beta, S_t, W0, time_points):
 Hierarchical validation across all 11 datasets provided overwhelming evidence for continuous over discrete stress models. WAIC differences consistently favored the continuous W(t) framework, with all datasets exceeding the decisive evidence threshold (WAIC Δ < -10):
 
 ![Figure 1: WAIC Comparison](figures/fig1_waic_comparison.png)
-*Figure 1: WAIC Comparison between Continuous and Discrete Models. Continuous W(t) models show decisive preference (WAIC Δ < -10) across all datasets, demonstrating overwhelming evidence for continuous stress dynamics.*
+*Figure 1: WAIC Comparison between Continuous and Discrete Models. Continuous Physiology-First Framework models show decisive preference (WAIC Δ < -10) across all datasets, demonstrating overwhelming evidence for continuous stress dynamics.*
 
 
 
@@ -357,7 +357,7 @@ Discrete models showed consistently inferior performance:
 **Mean Absolute Error**: 0.089 ± 0.015
 
 ![Figure 3: W(t) Time Series Trajectories](figures/fig3_trajectories_timeseries.png)
-*Figure 3: W(t) Continuous Stress Trajectories. Decisive evidence for continuity across different stress accumulation patterns, showing smooth, continuous dynamics rather than discrete categorical states.*
+*Figure 3: Physiology-First Framework Continuous Stress Trajectories. Decisive evidence for continuity across different stress accumulation patterns, showing smooth, continuous dynamics rather than discrete categorical states.*
 
 
 
@@ -484,7 +484,7 @@ Performance metrics across core validation datasets:
 **Mean Performance**: R² = 0.9987 ± 0.0003, RMSE = 0.021 ± 0.002, MAE = 0.014 ± 0.002
 
 ![Figure 9: Performance Heatmap](figures/fig9_performance_heatmap.png)
-*Figure 9: Multi-modal Fusion Performance Heatmap. Exceptional performance (R² = 0.9987 ± 0.0003) across 11 datasets demonstrates the robustness and generalizability of the W(t) framework.*
+*Figure 9: Multi-modal Fusion Performance Heatmap. Exceptional performance (R² = 0.9987 ± 0.0003) across 11 datasets demonstrates the robustness and generalizability of the Physiology-First Framework.*
 
 ### 4.5 Sensitivity Analysis
 
@@ -637,7 +637,7 @@ Direct accumulation rate modification requires β adequacy:
 
 #### 5.3.1 Wearable Integration
 
-The W(t) framework integrates with commercial wearable devices for continuous monitoring:
+The Physiology-First Framework integrates with commercial wearable devices for continuous monitoring:
 
 **Heart Rate Variability**: Primary physiological input for stress detection
 **Electrodermal Activity**: Secondary arousal indicator
@@ -706,7 +706,7 @@ The extreme effect sizes observed in stress stratification (d = 16.80 for accumu
 
 #### 6.2.1 Precision Psychiatry
 
-The W(t) framework enables precision psychiatry by providing quantitative physiological benchmarks for risk stratification. Unlike traditional symptom-based approaches, the framework offers objective, continuous assessment that can detect stress accumulation before symptom manifestation. This early detection capability creates opportunities for preventive intervention that were previously impossible.
+The Physiology-First Framework enables precision psychiatry by providing quantitative physiological benchmarks for risk stratification. Unlike traditional symptom-based approaches, the framework offers objective, continuous assessment that can detect stress accumulation before symptom manifestation. This early detection capability creates opportunities for preventive intervention that were previously impossible.
 
 The context-specific parameter benchmarks provide actionable guidance for environmental risk assessment and intervention targeting. The finding that workplace environments show the highest accumulation rates (α = 5.01 × 10⁻³ s⁻¹) compared to driving contexts (α = 0.30 × 10⁻³ s⁻¹) offers specific targets for organizational interventions.
 
@@ -720,7 +720,7 @@ The real-time monitoring capabilities enable just-in-time adaptive interventions
 
 #### 6.3.1 Model Validation
 
-The hierarchical validation framework provides robust model comparison capabilities that account for uncertainty and enable cross-dataset generalization. The decisive WAIC evidence (Δ < -10) establishes the W(t) model as the strongest supported stress framework in the literature.
+The hierarchical validation framework provides robust model comparison capabilities that account for uncertainty and enable cross-dataset generalization. The decisive WAIC evidence (Δ < -10) establishes the Physiology-First Framework as the strongest supported stress framework in the literature.
 
 The GPU-accelerated processing pipeline enables real-time multi-modal fusion across large-scale datasets, making continuous stress monitoring feasible for clinical applications. The 8× speedup achieved through CUDA optimization makes the framework practical for real-world deployment.
 
@@ -752,13 +752,13 @@ The Learning Resonance Index (LRI) provides a novel approach to integrating phys
 
 ## 7. Conclusion
 
-This investigation establishes the W(t) bounded accumulation framework as the first quantitative, physiologically-grounded approach to stress stratification in psychiatry. The decisive validation evidence (WAIC Δ < -10) provides the strongest support for continuous stress dynamics in the scientific literature, fundamentally challenging discrete categorical frameworks.
+This investigation establishes the Physiology-First Framework as the first quantitative, physiologically-grounded approach to stress stratification in psychiatry. The decisive validation evidence (WAIC Δ < -10) provides the strongest support for continuous stress dynamics in the scientific literature, fundamentally challenging discrete categorical frameworks.
 
 The extreme physiological stratification effects (Cohen's d = 16.80 for accumulation rates) represent unprecedented individual differences in stress vulnerability, establishing quantitative benchmarks for clinical risk assessment. The context-specific parameter benchmarks provide actionable guidance for environmental risk assessment and intervention targeting.
 
 The clinical translation framework offers evidence-based intervention prioritization (β-boost > S(t) management > α optimization) and quantitative thresholds for risk stratification (α > 1.5 × 10⁻³ s⁻¹ indicates high risk). The real-time monitoring capabilities enable just-in-time adaptive interventions that can prevent stress accumulation before symptom manifestation.
 
-These findings establish the foundation for precision psychiatry that moves beyond symptom-based classification toward mechanism-driven intervention. The W(t) framework provides the quantitative tools necessary for early detection, risk stratification, and personalized intervention that can transform psychiatric practice from reactive symptom management toward preventive stress regulation.
+These findings establish the foundation for precision psychiatry that moves beyond symptom-based classification toward mechanism-driven intervention. The Physiology-First Framework provides the quantitative tools necessary for early detection, risk stratification, and personalized intervention that can transform psychiatric practice from reactive symptom management toward preventive stress regulation.
 
 The integration of mathematical modeling, hierarchical validation, and clinical translation represents a paradigm shift in stress science, providing the first systematic approach to understanding and intervening in the dynamic processes that underlie psychiatric vulnerability. This framework opens new possibilities for preventive psychiatry and personalized intervention that can improve outcomes while reducing the burden of mental health disorders.
 
@@ -774,7 +774,7 @@ PENG LI conceived the theoretical framework, designed the validation studies, im
 
 ## Data Availability
 
-All validation datasets are publicly available as referenced in the Methods section. Analysis code and computational methods are available in the project repository. The W(t) framework implementation is provided as open-source software for reproducibility and clinical translation.
+All validation datasets are publicly available as referenced in the Methods section. Analysis code and computational methods are available in the project repository. The Physiology-First Framework implementation is provided as open-source software for reproducibility and clinical translation.
 
 ### Dataset Access Information
 
@@ -796,7 +796,7 @@ All validation datasets are publicly available as referenced in the Methods sect
 
 ## Code Availability
 
-The complete implementation of the W(t) framework, including hierarchical validation methods, multi-modal fusion algorithms, and GPU acceleration code, is available in the project repository with detailed documentation for reproducibility and clinical deployment.
+The complete implementation of the Physiology-First Framework, including hierarchical validation methods, multi-modal fusion algorithms, and GPU acceleration code, is available in the project repository with detailed documentation for reproducibility and clinical deployment.
 
 ---
 
@@ -873,4 +873,4 @@ Wagenmakers, E. J., Marsman, M., Jamil, T., Ly, A., Verhagen, J., Love, J., ... 
 
 ---
 
-*This whitepaper presents independent research findings and does not represent the views of any institutional affiliation. The W(t) framework is available for research and clinical use under appropriate licensing terms.*
+*This whitepaper presents independent research findings and does not represent the views of any institutional affiliation. The Physiology-First Framework is available for research and clinical use under appropriate licensing terms.*

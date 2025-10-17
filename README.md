@@ -9,13 +9,13 @@
 
 **Preprint Available**: [SSRN Preprint](https://doi.org/10.2139/ssrn.5589750)
 
-**Technical Whitepaper**: [W(t) Stress Accumulation Framework](WHITEPAPER.md) - **NEW!**
+**Technical Whitepaper**: [Physiology-First Framework](WHITEPAPER.md) - **NEW!**
 
 **Title**: A Physiology-First, Execution-Efficiency Framework for Psychiatric Disorders: Retraining Intact Learning Trajectories
 
 **Author**: PENG LI, Independent Researcher, mr.perfect601601@gmail.com
 
-This repository contains the complete code, data, and analysis for our research on physiological signal analysis for stress recovery modeling. The work has been submitted and is available as a preprint. **NEW**: A comprehensive technical whitepaper detailing the W(t) stress accumulation framework with Bayesian validation (BF > 10³¹) and extreme physiological stratification (d > 10) is now available. **Quality Check Report** included with 9.6/10 quality score.
+This repository contains the complete code, data, and analysis for our research on physiological signal analysis for stress recovery modeling. The work has been submitted and is available as a preprint. **NEW**: A comprehensive technical whitepaper detailing the Physiology-First Framework with hierarchical validation architecture and extreme physiological stratification (Cohen's d > 16) is now available. **Quality Check Report** included with 9.6/10 quality score.
 
 ## 🎉 **Project Status: FULLY OPEN SOURCE**
 
@@ -36,16 +36,16 @@ This project is now fully open-sourced with all essential components available f
 ### 🚀 **Ready for Use**
 All files are immediately available for download and use. No external dependencies or additional setup required beyond the provided ZIP packages.
 
-## 📋 **Technical Whitepaper: W(t) Stress Accumulation Framework**
+## 📋 **Technical Whitepaper: Physiology-First Framework**
 
 ### 🎯 **Breakthrough Scientific Findings**
 
 Our comprehensive technical whitepaper presents groundbreaking results that establish new standards in stress science:
 
 #### **🔬 Decisive Continuity Evidence**
-- **Bayes Factor > 10³¹** across all 11 datasets - the strongest evidence for stress continuity in scientific literature
-- **WAIC Δ < -10** consistently favoring continuous over discrete models
-- **Hierarchical Bayesian validation** with cross-dataset generalization
+- **WAIC Δ < -10** consistently favoring continuous over discrete models across all 11 datasets
+- **Hierarchical validation architecture** with cross-dataset generalization
+- **Multi-phase methodological development** ensuring robust statistical evidence
 
 #### **⚡ Extreme Physiological Stratification**
 - **Cohen's d = 16.80** for accumulation rate differences (high vs low stress groups)
@@ -170,7 +170,7 @@ This project implements a comprehensive machine learning framework for analyzing
 
 3. **Validation Framework**
    - System Continuity Validation (SCV)
-   - Hierarchical Bayesian modeling
+   - Hierarchical validation modeling
    - Cross-sample consistency analysis
 
 4. **Stress Recovery Modeling**
