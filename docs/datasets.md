@@ -6,9 +6,9 @@ This document provides comprehensive information about all 11 datasets used in t
 
 | # | Dataset | Samples | Features | Size | Type | Status |
 |---|---------|---------|----------|------|------|--------|
-| 1 | WESAD | 19,706 | 8 | ~500MB | Wearable stress detection | ✅ Complete |
-| 2 | MMASH | 50,000 | 9 | ~200MB | Multimodal stress analysis | ✅ Complete |
-| 3 | CRWD | 38,913 | 17 | ~100MB | Cognitive workload detection | ✅ Complete |
+| 1 | WESAD | 19,707 | 8 | ~500MB | Wearable stress detection | ✅ Complete |
+| 2 | MMASH | 399,261 | 9 | ~200MB | Multimodal stress analysis | ✅ Complete |
+| 3 | CRWD | 38,914 | 17 | ~100MB | Cognitive workload detection | ✅ Complete |
 | 4 | SWELL | 279,000 | 8 | ~1.2GB | Work stress analysis | ✅ Complete |
 | 5 | Nurses | 516 | 12 | ~1.1GB | Healthcare worker stress | ✅ Complete |
 | 6 | DRIVE-DB | 386,000 | 6 | ~1.5GB | Driver stress analysis | ✅ Complete |
@@ -32,7 +32,7 @@ All datasets listed below for comprehensive reference and validation coverage.
 - **Performance Target**: R² = 0.9987 ± 0.0003
 - **Method**: 2-layer LSTM with attention mechanism + GPU acceleration
 
-### **L3: Stress Stratification Analysis (6 datasets, 35,497 samples)**
+### **L3: Stress Stratification Analysis (6 datasets, ~239,000 samples)**
 - **Purpose**: Extreme physiological separation effects
 - **Datasets**: WESAD, MMASH, CRWD, SWELL, DRIVE-DB, Nurses
 - **Performance Target**: Cohen's d = 16.80 (α), 9.06 (β)
