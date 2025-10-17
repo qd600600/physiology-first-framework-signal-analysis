@@ -48,7 +48,7 @@ All datasets used in this study are publicly available:
 
 ## Code Availability
 
-All code is available under MIT license in this repository.
+All code is available under CC BY-NC 4.0 license in this repository.
 
 ## Contact
 
