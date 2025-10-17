@@ -1,0 +1,63 @@
+#!/usr/bin/env python3
+"""
+Setup script for Physiological Signal Analysis Project
+"""
+
+from setuptools import setup, find_packages
+import os
+
+# Read README file
+def read_readme():
+    with open("README.md", "r", encoding="utf-8") as fh:
+        return fh.read()
+
+# Read requirements
+def read_requirements():
+    with open("requirements_unified.txt", "r", encoding="utf-8") as fh:
+        return [line.strip() for line in fh if line.strip() and not line.startswith("#")]
+
+setup(
+    name="physiology-first-framework-signal-analysis",
+    version="1.0.0",
+    author="PENG LI",
+    author_email="mr.perfect601601@gmail.com",
+    description="A comprehensive machine learning framework for analyzing physiological signals to predict stress recovery patterns",
+    long_description=read_readme(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/qd600600/physiology-first-framework-signal-analysis",
+    project_urls={
+        "Bug Reports": "https://github.com/qd600600/physiology-first-framework-signal-analysis/issues",
+        "Source": "https://github.com/qd600600/physiology-first-framework-signal-analysis",
+        "Paper": "https://doi.org/10.2139/ssrn.5589750",
+    },
+    packages=find_packages(),
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Science/Research",
+        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+        "Topic :: Scientific/Engineering :: Information Analysis",
+        "License :: Creative Commons :: Attribution-NonCommercial 4.0 International",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.8",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+    ],
+    python_requires=">=3.8",
+    install_requires=read_requirements(),
+    extras_require={
+        "gpu": [
+            "torch>=2.0.0",
+            "cupy-cuda12x>=13.6.0",
+        ],
+        "dev": [
+            "pytest>=7.0.0",
+            "black>=23.0.0",
+            "flake8>=6.0.0",
+        ],
+    },
+    include_package_data=True,
+    zip_safe=False,
+    keywords="physiological-signals, stress-recovery, machine-learning, hrv-analysis, biomedical-signals",
+)
