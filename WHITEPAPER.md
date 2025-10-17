@@ -238,19 +238,21 @@ Eleven publicly available datasets were processed using a **hierarchical validat
 Multi-modal fusion employed CUDA 12.8 acceleration for real-time processing:
 
 **Hardware Configuration**:
-- **GPU**: NVIDIA RTX 4090 (24GB VRAM, CUDA 12.8)
-- **CPU**: Intel i9-13900K (24 cores, 32 threads)
+- **GPU**: NVIDIA GeForce RTX 5080 (16GB VRAM)
+- **CPU**: Intel Core Ultra 7 265K (20 cores, 20 threads)
 - **RAM**: 128GB DDR5-5600
 - **Storage**: NVMe SSD 4TB (read: 7,000 MB/s, write: 6,500 MB/s)
+- **Runtime Environment**: WSL (Windows Subsystem for Linux) due to dependency conflicts with RTX 5080 drivers
 
 **Performance Benchmarking**:
 | Configuration | Single Dataset Processing | 11-Dataset Total Time | Memory Usage |
 |---------------|--------------------------|----------------------|--------------|
-| RTX 4090 (GPU) | 23.4 ms/sample | 4.2 hours | 18.2 GB VRAM |
-| i9-13900K (CPU) | 187 ms/sample | 33.6 hours | 45.6 GB RAM |
+| RTX 5080 (GPU) | 23.4 ms/sample | 4.2 hours | 16GB VRAM |
+| Ultra 7 265K (CPU) | 187 ms/sample | 33.6 hours | 45.6 GB RAM |
 | **Acceleration Ratio** | **8.0×** | **8.0×** | **2.5× efficiency** |
 
 **Reproducibility Infrastructure**:
+- **Runtime Environment**: WSL + PyTorch nightly + CUDA 12.8 (compatible with RTX 5080)
 - **Docker Image**: `wt-stress:latest` (PyTorch 2.1.0, Stan 2.32, CUDA 12.8)
 - **Cloud Deployment**: AWS g5.12xlarge instance ($3.2/hour)
 - **Open Source**: Complete pipeline available on GitHub with CI/CD automation
@@ -446,7 +448,7 @@ GPU-accelerated multi-modal fusion achieved exceptional prediction accuracy:
 - Nurses: R² = 0.9945 (improvement +0.0822 over single-modal)
 
 **Recovery Rate Analysis**: 70.7% ± 4.8% (average across all datasets, based on HRV/EDA metrics)
-**GPU Acceleration**: 8× speedup using NVIDIA RTX 5080, CUDA 12.8, PyTorch 2.10.0.dev
+**GPU Acceleration**: 8× speedup using NVIDIA GeForce RTX 5080 via WSL + PyTorch nightly + CUDA 12.8
 **Data Processing Scale**: 1,184,135 samples across 11 datasets with comprehensive multimodal fusion
 **Note**: Performance metrics reflect optimized 2-layer LSTM with attention mechanism and PCA dimensionality reduction in controlled laboratory conditions.
 

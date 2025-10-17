@@ -514,7 +514,7 @@ python examples/quick_start.py
 - **GPU**: Optional (CPU-only mode supported)
 
 ### Recommended for GPU Acceleration:
-- **GPU**: NVIDIA RTX 3060 or better
+- **GPU**: NVIDIA RTX 3060 or better (RTX 5080 tested via WSL due to driver compatibility)
 - **CUDA**: 12.8+
 - **RAM**: 32GB+
 - **Storage**: SSD with 50GB+ free space
