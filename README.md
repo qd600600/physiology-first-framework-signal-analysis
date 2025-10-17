@@ -561,11 +561,11 @@ This project is licensed under the CC BY-NC 4.0 License - see the [LICENSE](LICE
 If you use this work in your research, please cite:
 
 ```bibtex
-@article{li2024physiology,
+@article{li2025physiology,
   title={A Physiology-First, Execution-Efficiency Framework for Psychiatric Disorders: Retraining Intact Learning Trajectories},
   author={Li, Peng},
   journal={SSRN Preprint},
-  year={2024},
+  year={2025},
   doi={10.2139/ssrn.5589750},
   url={https://doi.org/10.2139/ssrn.5589750}
 }
