@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this whitepaper, please cite it as below."
-title: "Physiology-First Framework Whitepaper v1.0"
+title: "Physiology-First Framework Whitepaper v2.1"
 authors:
 - family-names: "Li"
   given-names: "Peng"
@@ -8,7 +8,7 @@ authors:
   affiliation: "Independent Researcher"
 doi: "10.5281/zenodo.17374034"
 date-released: "2025-10-17"
-version: "1.0.0"
+version: "2.1.0"
 license: "CC-BY-NC-4.0"
 url: "https://github.com/qd600600/physiology-first-framework-signal-analysis"
 repository-code: "https://github.com/qd600600/physiology-first-framework-signal-analysis"
